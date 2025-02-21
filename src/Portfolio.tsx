@@ -11,21 +11,23 @@ import { Contact } from "./components/Contact";
 export const Portfolio = () => {
   return (
     <Provider store={store}>
-      <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="text-gray-400 bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen"
-      >
-        <Navbar />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <About />
-          <Projects />
-          <Skills />
-          <Education />
-          <Contact />
-        </div>
-      </motion.main>
+      <div className="overflow-x-hidden">
+        <motion.main
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="text-gray-400 bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen relative"
+        >
+          <Navbar />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <About />
+            <Projects />
+            <Skills />
+            <Education />
+            <Contact />
+          </div>
+        </motion.main>
+      </div>
     </Provider>
   );
 };

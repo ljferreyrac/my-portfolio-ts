@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { HiArrowRight, HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,15 +9,6 @@ export const Navbar = () => {
   const { actualLng, switchLanguage } = useLngStore();
   const languages = ["en", "es"];
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const navItems = [
     { href: "#projects", label: t("Navbar.Projects") },
@@ -27,11 +18,7 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-gray-900/95 backdrop-blur-sm shadow-lg"
-          : "bg-transparent"
-      }`}
+      className={`fixed w-full top-0 z-50 transition-all duration-300 bg-gray-900/95 backdrop-blur-sm shadow-lg`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
