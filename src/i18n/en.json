@@ -1,0 +1,64 @@
+{
+    "Navbar": {
+        "Projects": "Projects",
+        "Skills": "Skills",
+        "Education": "Education",
+        "HireMe": "Hire me!"
+    },
+    "About": {
+        "Greetings": "Hi, I'm Leonardo",
+        "LoveBuild": "I love to build awesome apps.",
+        "Me": "I'm an enthusiast for building all kinds of projects. I've successfully built apps using Vue, Angular, and React for the Frontend, and .Net, Spring Boot, and Node for the Backend. My curiosity and quick learning ability have allowed me to acquire a wide range of skills. My goal is to continue expanding my work experience and keep learning new technologies and methodologies. I'm always ready for the next challenge!",
+        "WorkWMe": "Work with me",
+        "PreviousW/P": "Check out my previous work / projects",
+        "CV": "Download my CV"
+    },
+    "Projects": {
+        "Title": "Apps I've built",
+        "Description": "Below you'll find a selection of applications I've developed. Each one showcases my ability to design and build complete software solutions. Feel free to explore!",
+        "ProjectsItem": {
+            "PortfolioDesc": "My portfolio",
+            "CalendarDesc": "A web application where you can create events and share them in a same calendar with everyone",
+            "JournalDesc": "Create, manage and attach images to notes with our Journal App",
+            "HeroesDesc": "Explore some of your favorite superheroes with our Heroes App",
+            "GifDesc": "Discover and share a world of GIFs with our Gif App",
+            "CreditDesc": "Simulate your car credit and plan your finances with my app"
+        }
+    },
+    "Skills": {
+        "Title": "Skills & Technologies",
+        "Description": "Throughout my career, I've acquired a broad range of technical skills across various technologies. My experience spans from frontend and backend development to database management and user interface design. I'm always ready to learn and adapt to new technologies to stay up-to-date with the latest trends in software development."
+    },
+    "Education": {
+        "Title": "My Education",
+        "Description": "Currently, I am in my fourth year of the Software Engineering degree at UPC University. Throughout my academic journey, I've had the opportunity to delve into various aspects of software development and engineering principles. At UPC, I've been involved in numerous projects ranging from web development to mobile application design. I'm excited to showcase the projects I've developed and the skills I've honed during my time at the university.",
+        "EducationItem": {
+            "DateStart": "Date Start:",
+            "DateEnd": "Date Finished:",
+            "DateExpected": "Date Expected to finish:"
+        },
+        "Institutions":{
+            "UPCDesc": "Software Engineering Degree",
+            "UdemyDesc": "React (MERN) Course"
+        },
+        "ProjectsItem": {
+            "HouseKeeperDesc": "A platform for travelers to find caretakers for their homes while they are away",
+            "ApiTechXPrimeDesc": "A service for customers to request tech repairs and for technicians to track earnings"
+        }
+    },
+    "Contact": {
+        "Title": "Hire me!",
+        "Description": "Looking for a passionate, quick-learning, and experienced developer? That's me! I've worked with a wide range of technologies and I'm always ready for new challenges. I can bring your ideas to life and help you achieve your goals. Let's build something amazing together!",
+        "Form": {
+            "Name": "Name",
+            "Email": "Email",
+            "Message": "Message",
+            "Send": "Send"
+        },
+        "Information": {
+            "Direction": "Direction",
+            "Email": "Email",
+            "Mobile": "Mobile"
+        }
+    }
+}
