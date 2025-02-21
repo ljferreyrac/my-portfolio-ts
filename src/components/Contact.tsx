@@ -6,8 +6,12 @@ import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { useTranslation } from "react-i18next";
 
-const { VITE_EMAIL_SERVICE_ID, VITE_EMAIL_TEMPLATE_ID, VITE_EMAIL_PUBLIC_KEY } =
-  getEnvironments();
+const {
+  VITE_EMAIL_SERVICE_ID,
+  VITE_EMAIL_TEMPLATE_ID,
+  VITE_EMAIL_PUBLIC_KEY,
+  VITE_GOOGLE_MAPS_API_KEY,
+} = getEnvironments();
 
 const initialForm = {
   name: "",
@@ -90,7 +94,7 @@ export const Contact = () => {
                 title="map"
                 className="absolute inset-0"
                 style={{ filter: "opacity(0.7)" }}
-                src="https://www.google.com/maps/embed/v1/place?q=Pueblo+Libre&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                src={`https://www.google.com/maps/embed/v1/place?q=Pueblo+Libre&key=${VITE_GOOGLE_MAPS_API_KEY}`}
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gray-900/80 backdrop-blur-sm p-6">
                 <div className="grid md:grid-cols-2 gap-6">
