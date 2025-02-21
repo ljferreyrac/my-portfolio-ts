@@ -7,10 +7,15 @@ export const About = () => {
   const { t } = useTranslation();
   const { actualLng } = useLngStore();
   const pdfFilename = "CV_Leonardo.pdf";
+  const resumeFilename = "Resume_Leonardo.pdf";
   const pdfUrl =
     actualLng == "en"
       ? "./CV_LeonardoFerreyra_ENG.pdf"
       : "./CV_LeonardoFerreyra_ESP.pdf";
+  const resumeUrl =
+    actualLng == "en"
+      ? "./Resume_LeonardoFerreyra_ENG.pdf"
+      : "./Resume_LeonardoFerreyra_ESP.pdf";
 
   return (
     <section id="about" className="min-h-screen flex items-center">
@@ -80,6 +85,19 @@ export const About = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 {t("About.CV")}
+                <HiDownload className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+              </motion.a>
+
+              <motion.a
+                href={resumeUrl}
+                download={resumeFilename}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 bg-gray-800 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-700 hover:text-white transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {t("About.Resume")}
                 <HiDownload className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
               </motion.a>
             </motion.div>

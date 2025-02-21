@@ -12,9 +12,27 @@ export const institutions = [
     name: "Udemy",
     image:
       "https://res.cloudinary.com/x-app-react-x/image/upload/v1708718815/portfolio/udemypng-removebg-preview_1_y5j5hv.png",
-    description: "Education.Institutions.UdemyDesc",
+    description: "Education.Institutions.UdemyReact",
     dateStart: "2024",
     dateFinished: "2024",
+    dateExpected: "",
+  },
+  {
+    name: "DevTalles",
+    image:
+      "https://res.cloudinary.com/x-app-react-x/image/upload/v1740111979/portfolio/dev-talles.png",
+    description: "Education.Institutions.DevTallesNode",
+    dateStart: "2024",
+    dateFinished: "2024",
+    dateExpected: "",
+  },
+  {
+    name: "DevTalles",
+    image:
+      "https://res.cloudinary.com/x-app-react-x/image/upload/v1740111979/portfolio/dev-talles.png",
+    description: "Education.Institutions.DevTallesNext",
+    dateStart: "2024",
+    dateFinished: "2025",
     dateExpected: "",
   },
 ];

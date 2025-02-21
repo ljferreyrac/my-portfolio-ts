@@ -6,6 +6,7 @@ import {
 import { projects } from "../data/dataProjects";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { HiLockClosed } from "react-icons/hi";
 
 export const Projects = () => {
   const { t } = useTranslation();
@@ -56,7 +57,6 @@ export const Projects = () => {
           </h2>
           <p className="text-xl text-gray-300">{t("Projects.Description")}</p>
         </motion.div>
-
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
           variants={containerVariants}
@@ -89,7 +89,7 @@ export const Projects = () => {
                 <p className="text-gray-300 mb-4">{t(project.description)}</p>
 
                 <div className="flex flex-wrap gap-4">
-                  {project.linkDemo && (
+                  {project.linkDemo ? (
                     <a
                       href={project.linkDemo}
                       target="_blank"
@@ -97,10 +97,18 @@ export const Projects = () => {
                       className="group flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
                     >
                       <HiArrowTopRightOnSquare className="w-5 h-5" />
-                      <span>Live Demo</span>
+                      <span>{t("Projects.Demo")}</span>
                     </a>
+                  ) : (
+                    project.requiresAuth && (
+                      <div className="group flex items-center gap-2 text-yellow-400">
+                        <HiLockClosed className="w-5 h-5" />
+                        <span>{t("Projects.Authentication")}</span>
+                      </div>
+                    )
                   )}
-                  {project.backendRepo && (
+
+                  {project.backendRepo ? (
                     <a
                       href={project.backendRepo}
                       target="_blank"
@@ -110,8 +118,16 @@ export const Projects = () => {
                       <HiCodeBracketSquare className="w-5 h-5" />
                       <span>Backend</span>
                     </a>
+                  ) : (
+                    project.isBackendPrivate && (
+                      <div className="group flex items-center gap-2 text-red-400">
+                        <HiLockClosed className="w-5 h-5" />
+                        <span>Backend (Private)</span>
+                      </div>
+                    )
                   )}
-                  {project.frontendRepo && (
+
+                  {project.frontendRepo ? (
                     <a
                       href={project.frontendRepo}
                       target="_blank"
@@ -121,6 +137,13 @@ export const Projects = () => {
                       <HiCodeBracketSquare className="w-5 h-5" />
                       <span>Frontend</span>
                     </a>
+                  ) : (
+                    project.isFrontendPrivate && (
+                      <div className="group flex items-center gap-2 text-red-400">
+                        <HiLockClosed className="w-5 h-5" />
+                        <span>Frontend ({t("Projects.Private")})</span>
+                      </div>
+                    )
                   )}
                 </div>
               </div>

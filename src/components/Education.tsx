@@ -143,7 +143,7 @@ export const Education = () => {
                       className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
                     >
                       <HiArrowTopRightOnSquare className="w-5 h-5" />
-                      <span>Live Demo</span>
+                      <span>{t("Education.ProjectsItem.Demo")}</span>
                     </a>
                   )}
                   {project.backendRepo && (

@@ -1,64 +1,72 @@
 {
-    "Navbar": {
-        "Projects": "Proyectos",
-        "Skills": "Habilidades",
-        "Education": "Educación",
-        "HireMe": "¡Contrátame!"
+  "Navbar": {
+    "Projects": "Proyectos",
+    "Skills": "Habilidades",
+    "Education": "Educación",
+    "HireMe": "¡Contrátame!"
+  },
+  "About": {
+    "Greetings": "Hola, soy Leonardo",
+    "LoveBuild": "Me encanta desarrollar aplicaciones increíbles.",
+    "Me": "Soy un entusiasta del desarrollo de todo tipo de proyectos. He diseñado con éxito aplicaciones utilizando Vue, Angular y React para el Frontend, y .Net, Spring Boot y Node para el Backend. Mi curiosidad y capacidad de aprendizaje rápido me han permitido adquirir una amplia gama de habilidades. Mi objetivo es continuar expandiendo mi experiencia laboral y seguir aprendiendo nuevas tecnologías y metodologías. ¡Siempre estoy listo para el próximo desafío!",
+    "WorkWMe": "Trabaja conmigo",
+    "PreviousW/P": "Revisa mis trabajos / proyectos anteriores",
+    "CV": "Descarga mi CV",
+    "Resume": "Descarga mi Resume"
+  },
+  "Projects": {
+    "Title": "Aplicaciones en las que he trabajado",
+    "Description": "A continuación, encontrarás una selección de aplicaciones en las que he trabajado. Cada una destaca mis contribuciones al desarrollo de software, desde el diseño hasta la implementación. ¡Siéntete libre de explorarlas!",
+    "ProjectsItem": {
+      "FlitDesc": "FLIT es un ERP para el sector transporte que optimiza la gestión de flotas, planificación de viajes y emisión de boletos con automatización y seguimiento en tiempo real",
+      "BranchOutDesc": "Optimiza el control de asistencia escaneando códigos QR de empleados, registrando horarios y datos clave al instante. Filtra y analiza registros con facilidad",
+      "NeuroPeruDesc": "Plataforma médica para consultas en neurocirugía, neurología y traumatología. Además, ofrece alquiler de equipos médicos y un centro de información gestionado por especialistas",
+      "PortfolioDesc": "Mi portafolio",
+      "CreditDesc": "Simula tu crédito automotriz y planifica tus finanzas con mi aplicación"
     },
-    "About": {
-        "Greetings": "Hola, soy Leonardo",
-        "LoveBuild": "Me encanta desarrollar aplicaciones increíbles.",
-        "Me": "Soy un entusiasta del desarrollo de todo tipo de proyectos. He diseñado con éxito aplicaciones utilizando Vue, Angular y React para el Frontend, y .Net, Spring Boot y Node para el Backend. Mi curiosidad y capacidad de aprendizaje rápido me han permitido adquirir una amplia gama de habilidades. Mi objetivo es continuar expandiendo mi experiencia laboral y seguir aprendiendo nuevas tecnologías y metodologías. ¡Siempre estoy listo para el próximo desafío!",
-        "WorkWMe": "Trabaja conmigo",
-        "PreviousW/P": "Revisa mis trabajos / proyectos anteriores",
-        "CV": "Descarga mi CV"
+    "Private": "Privado",
+    "Authentication": "Requiere autenticación",
+    "Demo": "Ver demo"
+  },
+  "Skills": {
+    "Title": "Habilidades & Tecnologías",
+    "Description": "A lo largo de mi carrera, he adquirido una amplia gama de habilidades técnicas en diversas tecnologías. Mi experiencia abarca desde el desarrollo de frontend y backend hasta la gestión de bases de datos y el diseño de interfaces de usuario. Siempre estoy listo para aprender y adaptarme a nuevas tecnologías para mantenerme al día con las últimas tendencias en desarrollo de software."
+  },
+  "Education": {
+    "Title": "Mi Educación",
+    "Description": "Actualmente, estoy en mi cuarto año de la carrera de Ingeniería de Software en la Universidad UPC. A lo largo de mi trayectoria académica, he tenido la oportunidad de profundizar en varios aspectos del desarrollo de software y los principios de ingeniería. En la UPC, he participado en numerosos proyectos que van desde el desarrollo web hasta el diseño de aplicaciones móviles. Estoy emocionado de mostrar los proyectos que he desarrollado y las habilidades que he perfeccionado durante mi tiempo en la universidad.",
+    "EducationItem": {
+      "DateStart": "Fecha de Inicio:",
+      "DateEnd": "Fecha de Finalización:",
+      "DateExpected": "Fecha Esperada de finalización:"
     },
-    "Projects": {
-        "Title": "Aplicaciones que he desarrollado",
-        "Description": "A continuación encontrarás una selección de aplicaciones que he desarrollado. Cada una demuestra mi habilidad para diseñar y construir soluciones de software completas. ¡Siéntete libre de explorar!",
-        "ProjectsItem": {
-            "PortfolioDesc": "Mi portafolio",
-            "CalendarDesc": "Una aplicación web donde puedes crear eventos y compartirlos en un mismo calendario con todos",
-            "JournalDesc": "Crea, gestiona y adjunta imágenes a notas con nuestra Journal App",
-            "HeroesDesc": "Explora algunos de tus superhéroes favoritos con nuestra Heroes App",
-            "GifDesc": "Descubre y comparte un mundo de GIFs con nuestra Gif App",
-            "CreditDesc": "Simula tu crédito automotriz y planifica tus finanzas con mi aplicación"
-        }
+    "Institutions": {
+      "UPCDesc": "Grado en Ingeniería de Software",
+      "UdemyReact": "Curso de React (MERN)",
+      "DevTallesNode": "Curso de Node",
+      "DevTallesNext": "Curso de Next"
     },
-    "Skills": {
-        "Title": "Habilidades & Tecnologías",
-        "Description": "A lo largo de mi carrera, he adquirido una amplia gama de habilidades técnicas en diversas tecnologías. Mi experiencia abarca desde el desarrollo de frontend y backend hasta la gestión de bases de datos y el diseño de interfaces de usuario. Siempre estoy listo para aprender y adaptarme a nuevas tecnologías para mantenerme al día con las últimas tendencias en desarrollo de software."
-    },
-    "Education": {
-        "Title": "Mi Educación",
-        "Description": "Actualmente, estoy en mi cuarto año de la carrera de Ingeniería de Software en la Universidad UPC. A lo largo de mi trayectoria académica, he tenido la oportunidad de profundizar en varios aspectos del desarrollo de software y los principios de ingeniería. En la UPC, he participado en numerosos proyectos que van desde el desarrollo web hasta el diseño de aplicaciones móviles. Estoy emocionado de mostrar los proyectos que he desarrollado y las habilidades que he perfeccionado durante mi tiempo en la universidad.",
-        "EducationItem": {
-            "DateStart": "Fecha de Inicio:",
-            "DateEnd": "Fecha de Finalización:",
-            "DateExpected": "Fecha Esperada de finalización:"
-        },
-        "Institutions":{
-            "UPCDesc": "Grado en Ingeniería de Software",
-            "UdemyDesc": "Curso React (MERN)"
-        },
-        "ProjectsItem": {
-            "HouseKeeperDesc": "Una plataforma para que los viajeros encuentren cuidadores para sus hogares mientras están fuera",
-            "ApiTechXPrimeDesc": "Un servicio para que los clientes soliciten reparaciones técnicas y para que los técnicos rastreen las ganancias"
-        }
-    },
-    "Contact": {
-        "Title": "¡Contrátame!",
-        "Description": "¿Buscas un desarrollador apasionado, de aprendizaje rápido y con experiencia? ¡Ese soy yo! He trabajado con una amplia gama de tecnologías y siempre estoy listo para nuevos desafíos. Puedo dar vida a tus ideas y ayudarte a alcanzar tus metas. ¡Construyamos algo increíble juntos!",
-        "Form": {
-            "Name": "Nombre",
-            "Email": "Correo electrónico",
-            "Message": "Mensaje",
-            "Send": "Enviar"
-        },
-        "Information": {
-            "Direction": "Dirección",
-            "Email": "Correo electrónico",
-            "Mobile": "Celular"
-        }
+    "ProjectsItem": {
+      "CalendarDesc": "Una aplicación web donde puedes crear eventos y compartirlos en un mismo calendario con todos",
+      "JournalDesc": "Crea, gestiona y adjunta imágenes a notas con nuestra Journal App",
+      "HouseKeeperDesc": "Una plataforma para que los viajeros encuentren cuidadores para sus hogares mientras están fuera",
+      "ApiTechXPrimeDesc": "Un servicio para que los clientes soliciten reparaciones técnicas y para que los técnicos rastreen las ganancias",
+      "Demo": "Ver demo"
     }
+  },
+  "Contact": {
+    "Title": "¡Contrátame!",
+    "Description": "¿Buscas un desarrollador apasionado, de aprendizaje rápido y con experiencia? ¡Ese soy yo! He trabajado con una amplia gama de tecnologías y siempre estoy listo para nuevos desafíos. Puedo dar vida a tus ideas y ayudarte a alcanzar tus metas. ¡Construyamos algo increíble juntos!",
+    "Form": {
+      "Name": "Nombre",
+      "Email": "Correo electrónico",
+      "Message": "Mensaje",
+      "Send": "Enviar"
+    },
+    "Information": {
+      "Direction": "Dirección",
+      "Email": "Correo electrónico",
+      "Mobile": "Celular"
+    }
+  }
 }
