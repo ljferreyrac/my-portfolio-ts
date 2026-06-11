@@ -1,72 +1,141 @@
 {
   "Navbar": {
+    "Experience": "Experience",
     "Projects": "Projects",
     "Skills": "Skills",
-    "Education": "Education",
     "HireMe": "Hire me!"
   },
-  "About": {
-    "Greetings": "Hi, I'm Leonardo",
-    "LoveBuild": "I love to build awesome apps.",
-    "Me": "I'm an enthusiast for building all kinds of projects. I've successfully built apps using Vue, Angular, and React for the Frontend, and .Net, Spring Boot, and Node for the Backend. My curiosity and quick learning ability have allowed me to acquire a wide range of skills. My goal is to continue expanding my work experience and keep learning new technologies and methodologies. I'm always ready for the next challenge!",
+  "Hero": {
+    "Greetings": "Hi, I'm Leonardo Ferreyra",
+    "Tagline": "Software Engineer — AI Agents & Backend",
+    "Summary": "Software Engineer with 4+ years of experience designing scalable backend systems, AI-driven architectures, and cloud-native solutions. I specialize in Java/Spring Boot, Python, and distributed systems, with deep expertise in AI agent frameworks (CrewAI, LangGraph), LLM observability (Phoenix/Arize), and MCP-based automation. Passionate about building intelligent, observable, and production-ready AI systems.",
     "WorkWMe": "Work with me",
-    "PreviousW/P": "Check out my previous work / projects",
-    "CV": "Download my CV",
-    "Resume": "Download my Resume"
+    "ViewProjects": "View my work",
+    "Resume": "Download Resume"
+  },
+  "Experience": {
+    "Title": "Professional Experience",
+    "Description": "4+ years building production systems across AI, backend, and cloud — from multi-agent LLM pipelines to enterprise ERPs.",
+    "Items": {
+      "Kinara": {
+        "Role": "Software Developer",
+        "Location": "Canada (Remote)",
+        "Period": "Nov 2025 — Apr 2026",
+        "Highlights": [
+          "Owned end-to-end design and delivery of a multi-agent AI pipeline for real-time Wi-Fi network analytics, orchestrating specialized agents with CrewAI and LangGraph.",
+          "Architected an LLM proxy layer with dynamic routing between self-hosted models (Qwen, DeepSeek) and cloud providers (OpenAI, Anthropic), enabling seamless model swapping and A/B evaluation.",
+          "Integrated Phoenix (Arize) for end-to-end LLM observability — tracing agent sessions and tool calls to identify latency bottlenecks and hallucination patterns.",
+          "Designed Python streaming-telemetry and log-analyzer services consuming MQTT network data, with runtime-configurable APIs and scale testing up to 100 APs using InfluxDB and Mosquitto."
+        ]
+      },
+      "Enviame": {
+        "Role": "Software Developer",
+        "Location": "Chile (Remote)",
+        "Period": "Apr 2025 — Nov 2025",
+        "Highlights": [
+          "Led end-to-end implementation of backend features on Google Cloud (Cloud Run, Cloud Functions, Firestore), owning architecture decisions and delivery.",
+          "Improved system reliability with a Redis-based batching system that regulated outbound requests, reducing rate-limit errors (HTTP 429) and stabilizing external API communication.",
+          "Automated the internal developer workflow by integrating MCP with JIRA, Confluence, and Bitbucket — including automatic PR generation — boosting team productivity.",
+          "Optimized MySQL data access patterns, resolving critical performance issues and significantly reducing response times."
+        ]
+      },
+      "Civa": {
+        "Role": "Software Developer",
+        "Location": "Lima, Peru",
+        "Period": "Apr 2024 — Apr 2025",
+        "Highlights": [
+          "Developed the backend of the FLIT transportation ERP with Java/Spring Boot, implementing JWT authentication and RESTful APIs.",
+          "Optimized response times with Data Transfer Objects (DTOs), achieving a 30% latency reduction.",
+          "Migrated from basic authentication to JWT with Spring Security, enabling Microsoft Azure SSO integration.",
+          "Built frontend components with React/Redux following Domain-Driven Design within Agile/Scrum workflows."
+        ]
+      },
+      "Solyman": {
+        "Role": "Software Developer",
+        "Location": "Lima, Peru (Remote)",
+        "Period": "Sep 2023 — Feb 2024",
+        "Highlights": [
+          "Developed a currency and cryptocurrency exchange platform in Odoo using MVC and OOP with real-time REST API integrations.",
+          "Implemented dynamic JavaScript visualizations for trend analysis and a PostgreSQL-backed regulatory reporting module."
+        ]
+      },
+      "Valentor": {
+        "Role": "Software Engineer",
+        "Location": "Lima, Peru (Remote)",
+        "Period": "Apr 2022 — Sep 2023",
+        "Highlights": [
+          "Architected and delivered 5+ integrated systems for nightclub operations: personnel management, cross-platform mobile app, POS, attendance control with facial recognition, and an event marketing platform.",
+          "Implemented cloud infrastructure on AWS and GCP with CI/CD, Docker, and Kubernetes — improving deployment speed by 60% and significantly reducing downtime."
+        ]
+      }
+    }
   },
   "Projects": {
-    "Title": "Apps I've worked on",
-    "Description": "Below you'll find a selection of applications I've worked on. Each one highlights my contributions to software development, from design to implementation. Feel free to explore!",
-    "ProjectsItem": {
-      "FlitDesc": "FLIT is an ERP designed for the transportation sector, optimizing fleet management, trip planning, and ticketing through automation and real-time tracking",
-      "BranchOutDesc": "Streamlines workforce tracking by scanning employee QR codes, instantly logging attendance with timestamps and key details. Filter and analyze records effortlessly",
-      "NeuroPeruDesc": "Medical platform for neurosurgery, neurology, and traumatology consultations. It also offers medical equipment rentals and an information hub managed by specialists",
-      "PortfolioDesc": "My portfolio",
-      "CreditDesc": "Simulate your car credit and plan your finances with my app"
-    },
-    "Private": "Private",
+    "Title": "Featured Work",
+    "Description": "A selection of professional and personal projects. Proprietary work is described without visuals to respect client confidentiality.",
+    "Demo": "View demo",
+    "Repo": "Repository",
+    "Private": "Proprietary",
     "Authentication": "Requires authentication",
-    "Demo": "View demo"
+    "Personal": "Personal project",
+    "Items": {
+      "AiPipeline": {
+        "Context": "Kinara Systems",
+        "Desc": "Multi-agent AI pipeline for real-time Wi-Fi network analytics: specialized CrewAI/LangGraph agents for telemetry analysis and log classification, an LLM proxy across self-hosted and cloud models, and full observability with Phoenix/Arize."
+      },
+      "McpAutomation": {
+        "Context": "Enviame",
+        "Desc": "MCP-based automation of the internal developer workflow, integrating JIRA, Confluence, and Bitbucket with workflow orchestration and automatic PR generation — cutting manual work across the team."
+      },
+      "Flit": {
+        "Context": "CIVA",
+        "Desc": "ERP for the transportation sector that optimizes fleet management, trip planning, and ticketing. Java/Spring Boot backend with JWT authentication and a React/Redux frontend."
+      },
+      "CryptoExchange": {
+        "Context": "SOLYMAN Consultores de TI",
+        "Desc": "Currency and cryptocurrency exchange platform built in Odoo with real-time REST API integrations, dynamic trend visualizations, and a PostgreSQL-backed regulatory reporting module."
+      },
+      "Nightclub": {
+        "Context": "VALENTOR Producciones S.A.C.",
+        "Desc": "Suite of 5+ integrated systems for nightclub operations: personnel management, cross-platform mobile app, POS, facial-recognition attendance control, and an event marketing platform — deployed on AWS and GCP."
+      },
+      "NeuroPeru": {
+        "Context": "Personal project",
+        "Desc": "Medical platform for neurosurgery, neurology, and traumatology consultations. It also offers medical equipment rentals and an information hub managed by specialists."
+      },
+      "BranchOut": {
+        "Context": "Personal project",
+        "Desc": "Streamlines workforce tracking by scanning employee QR codes, instantly logging attendance with timestamps and key details. Filter and analyze records effortlessly."
+      }
+    }
   },
   "Skills": {
     "Title": "Skills & Technologies",
-    "Description": "Throughout my career, I've acquired a broad range of technical skills across various technologies. My experience spans from frontend and backend development to database management and user interface design. I'm always ready to learn and adapt to new technologies to stay up-to-date with the latest trends in software development."
-  },
-  "Education": {
-    "Title": "My Education",
-    "Description": "Currently, I am in my fourth year of the Software Engineering degree at UPC University. Throughout my academic journey, I've had the opportunity to delve into various aspects of software development and engineering principles. At UPC, I've been involved in numerous projects ranging from web development to mobile application design. I'm excited to showcase the projects I've developed and the skills I've honed during my time at the university.",
-    "EducationItem": {
-      "DateStart": "Date Start:",
-      "DateEnd": "Date Finished:",
-      "DateExpected": "Date Expected to finish:"
-    },
-    "Institutions": {
-      "UPCDesc": "Software Engineering Degree",
-      "UdemyReact": "React (MERN) Course",
-      "DevTallesNode": "Node Course",
-      "DevTallesNext": "Next Course"
-    },
-    "ProjectsItem": {
-      "CalendarDesc": "A web application where you can create events and share them in a same calendar with everyone",
-      "JournalDesc": "Create, manage and attach images to notes with our Journal App",
-      "HouseKeeperDesc": "A platform for travelers to find caretakers for their homes while they are away",
-      "ApiTechXPrimeDesc": "A service for customers to request tech repairs and for technicians to track earnings",
-      "Demo": "View demo"
+    "Description": "The stack I work with daily — from AI agent frameworks and LLM tooling to backend, frontend, cloud, and data infrastructure.",
+    "Categories": {
+      "ai": "AI & Agents",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "cloud": "Cloud & DevOps",
+      "databases": "Databases"
     }
   },
   "Contact": {
-    "Title": "Hire me!",
-    "Description": "Looking for a passionate, quick-learning, and experienced developer? That's me! I've worked with a wide range of technologies and I'm always ready for new challenges. I can bring your ideas to life and help you achieve your goals. Let's build something amazing together!",
+    "Title": "Let's work together",
+    "Description": "Looking for an engineer who can design, build, and ship production-ready AI and backend systems? Let's talk — I'm always open to new challenges.",
     "Form": {
       "Name": "Name",
       "Email": "Email",
       "Message": "Message",
-      "Send": "Send"
+      "Send": "Send",
+      "Sending": "Sending..."
     },
-    "Information": {
-      "Direction": "Direction",
+    "Info": {
       "Email": "Email",
-      "Mobile": "Mobile"
+      "Phone": "Phone",
+      "Location": "Location",
+      "LocationValue": "Lima, Peru",
+      "Social": "Find me on"
     }
   }
 }

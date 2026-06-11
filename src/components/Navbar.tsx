@@ -46,21 +46,21 @@ export const Navbar = () => {
         ease: "easeIn",
       },
     },
-  };
+  } as const;
 
   const navItems = [
+    { href: "#experience", label: t("Navbar.Experience") },
     { href: "#projects", label: t("Navbar.Projects") },
     { href: "#skills", label: t("Navbar.Skills") },
-    { href: "#education", label: t("Navbar.Education") },
   ];
 
   return (
-    <header className="fixed w-full top-0 z-50 transition-all duration-300 bg-gray-900/95 backdrop-blur-sm shadow-lg">
+    <header className="fixed w-full top-0 z-50 transition-all duration-300 bg-slate-950/90 backdrop-blur-sm border-b border-slate-800/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <motion.a
             href="#about"
-            className="text-xl font-bold text-white hover:text-green-400 transition-colors cursor-pointer"
+            className="text-xl font-bold font-display text-white hover:text-emerald-400 transition-colors duration-200 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             onClick={(e) => {
               e.preventDefault();
@@ -75,7 +75,7 @@ export const Navbar = () => {
               <motion.a
                 key={item.href}
                 href={item.href}
-                className="text-gray-300 hover:text-white transition-colors cursor-pointer"
+                className="text-slate-300 hover:text-white transition-colors duration-200 cursor-pointer"
                 whileHover={{ y: -2 }}
                 onClick={(e) => {
                   e.preventDefault();
@@ -91,10 +91,11 @@ export const Navbar = () => {
                 <motion.button
                   key={lng}
                   whileHover={{ scale: 1.05 }}
-                  className={`px-3 py-1 rounded-md transition-colors ${
+                  aria-pressed={actualLng === lng}
+                  className={`px-3 py-1 rounded-md transition-colors duration-200 cursor-pointer ${
                     actualLng === lng
-                      ? "bg-green-500 text-white"
-                      : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                      ? "bg-emerald-500 text-white"
+                      : "bg-slate-800 text-slate-300 hover:bg-slate-700"
                   }`}
                   onClick={() => switchLanguage(lng)}
                 >
@@ -105,7 +106,7 @@ export const Navbar = () => {
 
             <motion.a
               href="#contact"
-              className="bg-green-500 text-white px-6 py-2 rounded-md flex items-center space-x-2 hover:bg-green-600 transition-colors cursor-pointer"
+              className="bg-emerald-500 text-white px-6 py-2 rounded-md flex items-center space-x-2 hover:bg-emerald-600 transition-colors duration-200 cursor-pointer"
               whileHover={{ scale: 1.05 }}
               onClick={(e) => {
                 e.preventDefault();
@@ -118,7 +119,9 @@ export const Navbar = () => {
           </nav>
 
           <button
-            className="md:hidden text-gray-300 hover:text-white"
+            className="md:hidden text-slate-300 hover:text-white cursor-pointer p-2"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
@@ -139,7 +142,7 @@ export const Navbar = () => {
                   <a
                     key={item.href}
                     href={item.href}
-                    className="block px-3 py-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700"
+                    className="block px-3 py-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-800 transition-colors duration-200"
                     onClick={(e) => {
                       e.preventDefault();
                       handleScrollTo(item.href);
@@ -153,10 +156,11 @@ export const Navbar = () => {
                   {languages.map((lng) => (
                     <button
                       key={lng}
-                      className={`px-3 py-1 rounded-md ${
+                      aria-pressed={actualLng === lng}
+                      className={`px-3 py-1 rounded-md cursor-pointer transition-colors duration-200 ${
                         actualLng === lng
-                          ? "bg-green-500 text-white"
-                          : "bg-gray-700 text-gray-300"
+                          ? "bg-emerald-500 text-white"
+                          : "bg-slate-800 text-slate-300"
                       }`}
                       onClick={() => switchLanguage(lng)}
                     >
@@ -167,7 +171,7 @@ export const Navbar = () => {
 
                 <a
                   href="#contact"
-                  className="block px-3 py-2 rounded-md text-white bg-green-500 hover:bg-green-600"
+                  className="block px-3 py-2 rounded-md text-white bg-emerald-500 hover:bg-emerald-600 transition-colors duration-200"
                   onClick={(e) => {
                     e.preventDefault();
                     handleScrollTo("#contact");

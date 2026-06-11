@@ -1,72 +1,141 @@
 {
   "Navbar": {
+    "Experience": "Experiencia",
     "Projects": "Proyectos",
     "Skills": "Habilidades",
-    "Education": "Educación",
     "HireMe": "¡Contrátame!"
   },
-  "About": {
-    "Greetings": "Hola, soy Leonardo",
-    "LoveBuild": "Me encanta desarrollar aplicaciones increíbles.",
-    "Me": "Soy un entusiasta del desarrollo de todo tipo de proyectos. He diseñado con éxito aplicaciones utilizando Vue, Angular y React para el Frontend, y .Net, Spring Boot y Node para el Backend. Mi curiosidad y capacidad de aprendizaje rápido me han permitido adquirir una amplia gama de habilidades. Mi objetivo es continuar expandiendo mi experiencia laboral y seguir aprendiendo nuevas tecnologías y metodologías. ¡Siempre estoy listo para el próximo desafío!",
+  "Hero": {
+    "Greetings": "Hola, soy Leonardo Ferreyra",
+    "Tagline": "Ingeniero de Software — Agentes de IA & Backend",
+    "Summary": "Ingeniero de Software con más de 4 años de experiencia diseñando sistemas backend escalables, arquitecturas impulsadas por IA y soluciones cloud-native. Me especializo en Java/Spring Boot, Python y sistemas distribuidos, con amplia experiencia en frameworks de agentes de IA (CrewAI, LangGraph), observabilidad de LLMs (Phoenix/Arize) y automatización basada en MCP. Apasionado por construir sistemas de IA inteligentes, observables y listos para producción.",
     "WorkWMe": "Trabaja conmigo",
-    "PreviousW/P": "Revisa mis trabajos / proyectos anteriores",
-    "CV": "Descarga mi CV",
-    "Resume": "Descarga mi Resume"
+    "ViewProjects": "Ver mi trabajo",
+    "Resume": "Descargar CV"
+  },
+  "Experience": {
+    "Title": "Experiencia Profesional",
+    "Description": "Más de 4 años construyendo sistemas en producción en IA, backend y cloud — desde pipelines multiagente con LLMs hasta ERPs empresariales.",
+    "Items": {
+      "Kinara": {
+        "Role": "Desarrollador de Software",
+        "Location": "Canadá (Remoto)",
+        "Period": "Nov 2025 — Abr 2026",
+        "Highlights": [
+          "Lideré de extremo a extremo el diseño y la entrega de un pipeline multiagente de IA para analítica de redes Wi-Fi en tiempo real, orquestando agentes especializados con CrewAI y LangGraph.",
+          "Diseñé una capa proxy de LLMs con enrutamiento dinámico entre modelos autoalojados (Qwen, DeepSeek) y proveedores cloud (OpenAI, Anthropic), permitiendo intercambio de modelos y evaluación A/B.",
+          "Integré Phoenix (Arize) para observabilidad completa de LLMs — trazando sesiones de agentes y llamadas a herramientas para identificar cuellos de botella de latencia y patrones de alucinación.",
+          "Diseñé servicios en Python de análisis de telemetría y logs en streaming sobre datos MQTT, con APIs configurables en tiempo de ejecución y pruebas de escala de hasta 100 APs usando InfluxDB y Mosquitto."
+        ]
+      },
+      "Enviame": {
+        "Role": "Desarrollador de Software",
+        "Location": "Chile (Remoto)",
+        "Period": "Abr 2025 — Nov 2025",
+        "Highlights": [
+          "Lideré la implementación de extremo a extremo de funcionalidades backend en Google Cloud (Cloud Run, Cloud Functions, Firestore), asumiendo las decisiones de arquitectura y la entrega.",
+          "Mejoré la confiabilidad del sistema con un mecanismo de batching basado en Redis que reguló las solicitudes salientes, reduciendo errores de límite de tasa (HTTP 429) y estabilizando la comunicación con APIs externas.",
+          "Automaticé el flujo de trabajo interno de desarrollo integrando MCP con JIRA, Confluence y Bitbucket — incluyendo generación automática de PRs — aumentando la productividad del equipo.",
+          "Optimicé los patrones de acceso a datos en MySQL, resolviendo problemas críticos de rendimiento y reduciendo significativamente los tiempos de respuesta."
+        ]
+      },
+      "Civa": {
+        "Role": "Desarrollador de Software",
+        "Location": "Lima, Perú",
+        "Period": "Abr 2024 — Abr 2025",
+        "Highlights": [
+          "Desarrollé el backend del ERP de transporte FLIT con Java/Spring Boot, implementando autenticación JWT y APIs RESTful.",
+          "Optimicé los tiempos de respuesta con Data Transfer Objects (DTOs), logrando una reducción de latencia del 30%.",
+          "Migré de autenticación básica a JWT con Spring Security, habilitando la integración con Microsoft Azure SSO.",
+          "Construí componentes frontend con React/Redux siguiendo Domain-Driven Design dentro de flujos Agile/Scrum."
+        ]
+      },
+      "Solyman": {
+        "Role": "Desarrollador de Software",
+        "Location": "Lima, Perú (Remoto)",
+        "Period": "Sep 2023 — Feb 2024",
+        "Highlights": [
+          "Desarrollé una plataforma de cambio de divisas y criptomonedas en Odoo usando MVC y OOP con integraciones REST en tiempo real.",
+          "Implementé visualizaciones dinámicas en JavaScript para análisis de tendencias y un módulo de reportería regulatoria respaldado por PostgreSQL."
+        ]
+      },
+      "Valentor": {
+        "Role": "Ingeniero de Software",
+        "Location": "Lima, Perú (Remoto)",
+        "Period": "Abr 2022 — Sep 2023",
+        "Highlights": [
+          "Diseñé y entregué más de 5 sistemas integrados para operaciones de discotecas: gestión de personal, app móvil multiplataforma, POS, control de asistencia con reconocimiento facial y plataforma de marketing de eventos.",
+          "Implementé infraestructura cloud en AWS y GCP con CI/CD, Docker y Kubernetes — mejorando la velocidad de despliegue en 60% y reduciendo significativamente el tiempo de inactividad."
+        ]
+      }
+    }
   },
   "Projects": {
-    "Title": "Aplicaciones en las que he trabajado",
-    "Description": "A continuación, encontrarás una selección de aplicaciones en las que he trabajado. Cada una destaca mis contribuciones al desarrollo de software, desde el diseño hasta la implementación. ¡Siéntete libre de explorarlas!",
-    "ProjectsItem": {
-      "FlitDesc": "FLIT es un ERP para el sector transporte que optimiza la gestión de flotas, planificación de viajes y emisión de boletos con automatización y seguimiento en tiempo real",
-      "BranchOutDesc": "Optimiza el control de asistencia escaneando códigos QR de empleados, registrando horarios y datos clave al instante. Filtra y analiza registros con facilidad",
-      "NeuroPeruDesc": "Plataforma médica para consultas en neurocirugía, neurología y traumatología. Además, ofrece alquiler de equipos médicos y un centro de información gestionado por especialistas",
-      "PortfolioDesc": "Mi portafolio",
-      "CreditDesc": "Simula tu crédito automotriz y planifica tus finanzas con mi aplicación"
-    },
-    "Private": "Privado",
+    "Title": "Trabajo Destacado",
+    "Description": "Una selección de proyectos profesionales y personales. El trabajo propietario se describe sin imágenes para respetar la confidencialidad de los clientes.",
+    "Demo": "Ver demo",
+    "Repo": "Repositorio",
+    "Private": "Propietario",
     "Authentication": "Requiere autenticación",
-    "Demo": "Ver demo"
+    "Personal": "Proyecto personal",
+    "Items": {
+      "AiPipeline": {
+        "Context": "Kinara Systems",
+        "Desc": "Pipeline multiagente de IA para analítica de redes Wi-Fi en tiempo real: agentes especializados con CrewAI/LangGraph para análisis de telemetría y clasificación de logs, un proxy de LLMs entre modelos autoalojados y cloud, y observabilidad completa con Phoenix/Arize."
+      },
+      "McpAutomation": {
+        "Context": "Enviame",
+        "Desc": "Automatización del flujo de trabajo de desarrollo basada en MCP, integrando JIRA, Confluence y Bitbucket con orquestación de flujos y generación automática de PRs — reduciendo el trabajo manual del equipo."
+      },
+      "Flit": {
+        "Context": "CIVA",
+        "Desc": "ERP para el sector transporte que optimiza la gestión de flotas, la planificación de viajes y la emisión de boletos. Backend en Java/Spring Boot con autenticación JWT y frontend en React/Redux."
+      },
+      "CryptoExchange": {
+        "Context": "SOLYMAN Consultores de TI",
+        "Desc": "Plataforma de cambio de divisas y criptomonedas construida en Odoo con integraciones REST en tiempo real, visualizaciones dinámicas de tendencias y un módulo de reportería regulatoria respaldado por PostgreSQL."
+      },
+      "Nightclub": {
+        "Context": "VALENTOR Producciones S.A.C.",
+        "Desc": "Suite de más de 5 sistemas integrados para operaciones de discotecas: gestión de personal, app móvil multiplataforma, POS, control de asistencia con reconocimiento facial y plataforma de marketing de eventos — desplegada en AWS y GCP."
+      },
+      "NeuroPeru": {
+        "Context": "Proyecto personal",
+        "Desc": "Plataforma médica para consultas en neurocirugía, neurología y traumatología. Además, ofrece alquiler de equipos médicos y un centro de información gestionado por especialistas."
+      },
+      "BranchOut": {
+        "Context": "Proyecto personal",
+        "Desc": "Optimiza el control de asistencia escaneando códigos QR de empleados, registrando horarios y datos clave al instante. Filtra y analiza registros con facilidad."
+      }
+    }
   },
   "Skills": {
     "Title": "Habilidades & Tecnologías",
-    "Description": "A lo largo de mi carrera, he adquirido una amplia gama de habilidades técnicas en diversas tecnologías. Mi experiencia abarca desde el desarrollo de frontend y backend hasta la gestión de bases de datos y el diseño de interfaces de usuario. Siempre estoy listo para aprender y adaptarme a nuevas tecnologías para mantenerme al día con las últimas tendencias en desarrollo de software."
-  },
-  "Education": {
-    "Title": "Mi Educación",
-    "Description": "Actualmente, estoy en mi cuarto año de la carrera de Ingeniería de Software en la Universidad UPC. A lo largo de mi trayectoria académica, he tenido la oportunidad de profundizar en varios aspectos del desarrollo de software y los principios de ingeniería. En la UPC, he participado en numerosos proyectos que van desde el desarrollo web hasta el diseño de aplicaciones móviles. Estoy emocionado de mostrar los proyectos que he desarrollado y las habilidades que he perfeccionado durante mi tiempo en la universidad.",
-    "EducationItem": {
-      "DateStart": "Fecha de Inicio:",
-      "DateEnd": "Fecha de Finalización:",
-      "DateExpected": "Fecha Esperada de finalización:"
-    },
-    "Institutions": {
-      "UPCDesc": "Grado en Ingeniería de Software",
-      "UdemyReact": "Curso de React (MERN)",
-      "DevTallesNode": "Curso de Node",
-      "DevTallesNext": "Curso de Next"
-    },
-    "ProjectsItem": {
-      "CalendarDesc": "Una aplicación web donde puedes crear eventos y compartirlos en un mismo calendario con todos",
-      "JournalDesc": "Crea, gestiona y adjunta imágenes a notas con nuestra Journal App",
-      "HouseKeeperDesc": "Una plataforma para que los viajeros encuentren cuidadores para sus hogares mientras están fuera",
-      "ApiTechXPrimeDesc": "Un servicio para que los clientes soliciten reparaciones técnicas y para que los técnicos rastreen las ganancias",
-      "Demo": "Ver demo"
+    "Description": "El stack con el que trabajo a diario — desde frameworks de agentes de IA y herramientas de LLMs hasta backend, frontend, cloud e infraestructura de datos.",
+    "Categories": {
+      "ai": "IA & Agentes",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "cloud": "Cloud & DevOps",
+      "databases": "Bases de Datos"
     }
   },
   "Contact": {
-    "Title": "¡Contrátame!",
-    "Description": "¿Buscas un desarrollador apasionado, de aprendizaje rápido y con experiencia? ¡Ese soy yo! He trabajado con una amplia gama de tecnologías y siempre estoy listo para nuevos desafíos. Puedo dar vida a tus ideas y ayudarte a alcanzar tus metas. ¡Construyamos algo increíble juntos!",
+    "Title": "Trabajemos juntos",
+    "Description": "¿Buscas un ingeniero capaz de diseñar, construir y desplegar sistemas de IA y backend listos para producción? Hablemos — siempre estoy abierto a nuevos desafíos.",
     "Form": {
       "Name": "Nombre",
       "Email": "Correo electrónico",
       "Message": "Mensaje",
-      "Send": "Enviar"
+      "Send": "Enviar",
+      "Sending": "Enviando..."
     },
-    "Information": {
-      "Direction": "Dirección",
-      "Email": "Correo electrónico",
-      "Mobile": "Celular"
+    "Info": {
+      "Email": "Correo",
+      "Phone": "Teléfono",
+      "Location": "Ubicación",
+      "LocationValue": "Lima, Perú",
+      "Social": "Encuéntrame en"
     }
   }
 }

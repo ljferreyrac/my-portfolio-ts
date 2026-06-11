@@ -6,12 +6,7 @@ import { HiDownload, HiArrowRight, HiMail } from "react-icons/hi";
 export const About = () => {
   const { t } = useTranslation();
   const { actualLng } = useLngStore();
-  const pdfFilename = "CV_Leonardo.pdf";
-  const resumeFilename = "Resume_Leonardo.pdf";
-  const pdfUrl =
-    actualLng == "en"
-      ? "./CV_LeonardoFerreyra_ENG.pdf"
-      : "./CV_LeonardoFerreyra_ESP.pdf";
+  const resumeFilename = "Resume_LeonardoFerreyra.pdf";
   const resumeUrl =
     actualLng == "en"
       ? "./Resume_LeonardoFerreyra_ENG.pdf"
@@ -20,7 +15,7 @@ export const About = () => {
   return (
     <section id="about" className="min-h-screen flex items-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="flex flex-col md:flex-row items-center gap-12">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-12">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -34,19 +29,19 @@ export const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              {t("About.Greetings")}
-              <span className="block text-green-500">
-                {t("About.LoveBuild")}
+              {t("Hero.Greetings")}
+              <span className="block text-emerald-400 text-3xl sm:text-4xl lg:text-5xl mt-2">
+                {t("Hero.Tagline")}
               </span>
             </motion.h1>
 
             <motion.p
-              className="text-lg text-gray-300 leading-relaxed"
+              className="text-lg text-slate-300 leading-relaxed max-w-2xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              {t("About.Me")}
+              {t("Hero.Summary")}
             </motion.p>
 
             <motion.div
@@ -57,35 +52,22 @@ export const About = () => {
             >
               <motion.a
                 href="#contact"
-                className="group flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-600 transition-colors"
+                className="group flex items-center gap-2 bg-emerald-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-600 transition-colors duration-200 cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {t("About.WorkWMe")}
+                {t("Hero.WorkWMe")}
                 <HiMail className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.a>
 
               <motion.a
                 href="#projects"
-                className="group flex items-center gap-2 bg-gray-800 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-700 hover:text-white transition-colors"
+                className="group flex items-center gap-2 bg-slate-800/80 border border-slate-700 text-slate-300 px-6 py-3 rounded-lg font-medium hover:bg-slate-700 hover:text-white transition-colors duration-200 cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {t("About.PreviousW/P")}
+                {t("Hero.ViewProjects")}
                 <HiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.a>
-
-              <motion.a
-                href={pdfUrl}
-                download={pdfFilename}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2 bg-gray-800 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-700 hover:text-white transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {t("About.CV")}
-                <HiDownload className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
               </motion.a>
 
               <motion.a
@@ -93,11 +75,11 @@ export const About = () => {
                 download={resumeFilename}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 bg-gray-800 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-700 hover:text-white transition-colors"
+                className="group flex items-center gap-2 bg-slate-800/80 border border-slate-700 text-slate-300 px-6 py-3 rounded-lg font-medium hover:bg-slate-700 hover:text-white transition-colors duration-200 cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {t("About.Resume")}
+                {t("Hero.Resume")}
                 <HiDownload className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
               </motion.a>
             </motion.div>
@@ -105,40 +87,23 @@ export const About = () => {
 
           {/* Image */}
           <motion.div
-            className="flex-1 relative"
-            initial={{ opacity: 0, scale: 0.8 }}
+            className="flex-shrink-0"
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="relative w-full max-w-lg mx-auto">
-              <motion.div
-                className="absolute top-0 -left-4 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"
-                animate={{
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 120, 0],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                }}
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 mx-auto">
+              <div
+                className="absolute -inset-3 rounded-full bg-emerald-500/10 border border-emerald-500/30"
+                aria-hidden="true"
               />
-              <motion.div
-                className="absolute -bottom-8 right-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"
-                animate={{
-                  scale: [1, 1.1, 1],
-                  rotate: [0, -120, 0],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                }}
-              />
-              <motion.img
-                className="relative rounded-2xl shadow-2xl"
-                src="https://res.cloudinary.com/x-app-react-x/image/upload/v1708527898/portfolio/_afcc2b76-82fc-436a-8763-30efb7ff0741-removebg-preview_g63pmx.png"
-                alt="Profile"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
+              <img
+                className="relative w-full h-full object-cover rounded-full border border-slate-700 shadow-2xl"
+                src="/profile.webp"
+                alt="Leonardo Ferreyra"
+                width={400}
+                height={400}
+                fetchPriority="high"
               />
             </div>
           </motion.div>

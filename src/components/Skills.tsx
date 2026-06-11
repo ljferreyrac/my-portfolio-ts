@@ -1,5 +1,5 @@
-import { HiCheckBadge, HiCpuChip } from "react-icons/hi2";
-import { skills } from "../data/dataSkills";
+import { HiCpuChip } from "react-icons/hi2";
+import { skillCategories } from "../data/dataSkills";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
@@ -23,10 +23,7 @@ export const Skills = () => {
   };
 
   return (
-    <section
-      id="skills"
-      className="py-20 bg-gradient-to-b from-gray-800 to-gray-900"
-    >
+    <section id="skills" className="py-20">
       <div className="container px-4 mx-auto max-w-6xl">
         <motion.div
           className="text-center mb-16"
@@ -34,45 +31,59 @@ export const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <motion.div
-            whileHover={{ rotate: 360, scale: 1.2 }}
-            transition={{ duration: 0.5 }}
-            className="inline-block mb-4"
-          >
-            <HiCpuChip className="w-16 h-16 text-green-400" />
-          </motion.div>
+          <div className="inline-block mb-4">
+            <HiCpuChip className="w-14 h-14 text-emerald-400" />
+          </div>
           <h2 className="text-4xl font-bold text-white mb-6">
             {t("Skills.Title")}
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             {t("Skills.Description")}
           </p>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {skills.map((skill) => (
+          {skillCategories.map((category) => (
             <motion.div
-              key={skill.name}
+              key={category.id}
               variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
-              className="group"
+              className={`bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 rounded-xl p-6 transition-colors duration-200 ${
+                category.id === "ai" ? "md:col-span-2" : ""
+              }`}
             >
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 h-full border border-gray-700 hover:border-green-500/50 transition-colors">
-                <div className="flex items-center space-x-4">
-                  <div className="p-2 bg-green-500/10 rounded-lg">
-                    {skill.icon}
-                  </div>
-                  <span className="text-lg font-medium text-white group-hover:text-green-400 transition-colors">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="p-2 bg-emerald-500/10 rounded-lg">
+                  <category.icon
+                    className="w-6 h-6 text-emerald-400"
+                    aria-hidden="true"
+                  />
+                </div>
+                <h3 className="text-lg font-bold text-white">
+                  {t(`Skills.Categories.${category.id}`)}
+                </h3>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {category.items.map((skill) => (
+                  <span
+                    key={skill.name}
+                    className="flex items-center gap-2 px-3 py-1.5 text-sm rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-300"
+                  >
+                    {skill.icon && (
+                      <skill.icon
+                        className="w-4 h-4 text-emerald-400"
+                        aria-hidden="true"
+                      />
+                    )}
                     {skill.name}
                   </span>
-                  <HiCheckBadge className="ml-auto text-green-400 w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
+                ))}
               </div>
             </motion.div>
           ))}

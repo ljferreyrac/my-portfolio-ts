@@ -16,6 +16,7 @@ export const useLngStore = () => {
   const switchLanguage = (lng: string) => {
     dispatch(onSwitchLanguage(lng));
     i18n.changeLanguage(lng);
+    document.documentElement.lang = lng;
   };
 
   return {
