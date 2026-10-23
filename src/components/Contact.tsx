@@ -1,3 +1,4 @@
+import { SectionHeader } from "./SectionHeader";
 import { useState } from "react";
 import { useForm } from "../hooks/useForm";
 import { getEnvironments } from "../helpers/getEnvironments";
@@ -47,16 +48,16 @@ export const Contact = () => {
         VITE_EMAIL_PUBLIC_KEY
       );
       Swal.fire({
-        title: "Email sent!",
-        text: "Your email has been sent successfully",
+        title: t("Contact.Alert.SuccessTitle"),
+        text: t("Contact.Alert.SuccessText"),
         icon: "success",
         ...swalTheme,
       });
     } catch (error) {
       console.log(error);
       Swal.fire({
-        title: "Error",
-        text: "An error occurred while trying to send the email",
+        title: t("Contact.Alert.ErrorTitle"),
+        text: t("Contact.Alert.ErrorText"),
         icon: "error",
         ...swalTheme,
       });
@@ -66,24 +67,16 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 scroll-mt-16">
       <div className="container px-4 mx-auto">
-        <motion.div
-          className="max-w-3xl mx-auto text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div className="inline-block mb-4">
-            <HiEnvelope className="w-12 h-12 text-emerald-400" />
-          </div>
-          <h2 className="text-4xl font-bold text-white mb-6">
-            {t("Contact.Title")}
-          </h2>
-          <p className="text-xl text-slate-300">{t("Contact.Description")}</p>
-        </motion.div>
+        <SectionHeader
+          index="05"
+          eyebrow={t("Contact.Eyebrow")}
+          title={t("Contact.Title")}
+          description={t("Contact.Description")}
+        />
 
-        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row gap-8">
+        <div className="max-w-5xl flex flex-col lg:flex-row gap-8">
           {/* Contact info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

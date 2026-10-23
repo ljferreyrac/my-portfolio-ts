@@ -6,6 +6,21 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
+    id: "Upc",
+    company: "UPC",
+    stack: [
+      "NestJS",
+      "TypeORM",
+      "PostgreSQL",
+      "Next.js",
+      "React",
+      "Playwright",
+      "GitHub Actions",
+      "Docker",
+      "Entra ID",
+    ],
+  },
+  {
     id: "Kinara",
     company: "Kinara Systems",
     stack: [
@@ -38,12 +53,11 @@ export const experience: ExperienceItem[] = [
     company: "VALENTOR Producciones S.A.C.",
     stack: [
       "Django",
-      "React",
       "Flutter",
-      "NestJS",
-      "Next.js",
-      "Vue",
       "Angular",
+      "Vue.js",
+      ".NET",
+      "Azure AD",
       "AWS",
       "Docker",
       "Kubernetes",

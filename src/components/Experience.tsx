@@ -1,32 +1,23 @@
+import { SectionHeader } from "./SectionHeader";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { HiBriefcase, HiLocationMarker } from "react-icons/hi";
+import { HiLocationMarker } from "react-icons/hi";
 import { experience } from "../data/dataExperience";
 
 export const Experience = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20 scroll-mt-16">
       <div className="container px-4 mx-auto">
-        <motion.div
-          className="max-w-3xl mx-auto text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div className="inline-block mb-4">
-            <HiBriefcase className="w-12 h-12 text-emerald-400" />
-          </div>
-          <h2 className="text-4xl font-bold text-white mb-6">
-            {t("Experience.Title")}
-          </h2>
-          <p className="text-xl text-slate-300">
-            {t("Experience.Description")}
-          </p>
-        </motion.div>
+        <SectionHeader
+          index="02"
+          eyebrow={t("Experience.Eyebrow")}
+          title={t("Experience.Title")}
+          description={t("Experience.Description")}
+        />
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl">
           <ol className="relative border-l border-slate-800 ml-3 sm:ml-4 space-y-12">
             {experience.map((job, index) => {
               const highlights = t(`Experience.Items.${job.id}.Highlights`, {

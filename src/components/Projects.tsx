@@ -1,5 +1,6 @@
+import { SectionHeader } from "./SectionHeader";
 import {
-  HiCodeBracket,
+
   HiArrowTopRightOnSquare,
   HiCodeBracketSquare,
 } from "react-icons/hi2";
@@ -33,26 +34,17 @@ export const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 scroll-mt-16">
       <div className="container px-4 mx-auto">
-        <motion.div
-          className="max-w-3xl mx-auto text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div className="inline-block mb-4">
-            <HiCodeBracket className="w-12 h-12 text-emerald-400" />
-          </div>
-
-          <h2 className="text-4xl font-bold text-white mb-6">
-            {t("Projects.Title")}
-          </h2>
-          <p className="text-xl text-slate-300">{t("Projects.Description")}</p>
-        </motion.div>
+        <SectionHeader
+          index="03"
+          eyebrow={t("Projects.Eyebrow")}
+          title={t("Projects.Title")}
+          description={t("Projects.Description")}
+        />
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

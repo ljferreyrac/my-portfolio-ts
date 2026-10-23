@@ -1,31 +1,94 @@
 {
   "Navbar": {
+    "CaseStudy": "Case study",
     "Experience": "Experience",
     "Projects": "Projects",
     "Skills": "Skills",
-    "HireMe": "Hire me!"
+    "HireMe": "Contact"
   },
   "Hero": {
     "Greetings": "Hi, I'm Leonardo Ferreyra",
-    "Tagline": "Software Engineer — AI Agents & Backend",
-    "Summary": "Software Engineer with 4+ years of experience designing scalable backend systems, AI-driven architectures, and cloud-native solutions. I specialize in Java/Spring Boot, Python, and distributed systems, with deep expertise in AI agent frameworks (CrewAI, LangGraph), LLM observability (Phoenix/Arize), and MCP-based automation. Passionate about building intelligent, observable, and production-ready AI systems.",
-    "WorkWMe": "Work with me",
-    "ViewProjects": "View my work",
-    "Resume": "Download Resume"
+    "Tagline": "Software Engineer · AI Agents & Backend",
+    "Summary": "I build production backends and AI agent systems. Most recently I led the rebuild of UPC's accreditation platform on NestJS, PostgreSQL and Next.js. Before that I designed multi-agent LLM pipelines with CrewAI, LangGraph and Phoenix observability.",
+    "Available": "Open to remote roles · Lima, Peru (UTC-5)",
+    "WorkWMe": "Get in touch",
+    "ViewProjects": "See the case study",
+    "Resume": "Download resume",
+    "Metrics": [
+      { "Value": "18x", "Label": "faster grade export after profiling the production query" },
+      { "Value": "4x", "Label": "faster PDF generation with a persistent renderer" },
+      { "Value": "7/7", "Label": "developers adopted my AI-assisted dev standard" },
+      { "Value": "100 APs", "Label": "of synthetic load to stress-test AI agents" }
+    ]
+  },
+  "CaseStudy": {
+    "Eyebrow": "Case study",
+    "Title": "Multi-agent pipeline for real-time Wi-Fi analytics",
+    "Lead": "At Kinara Systems I designed and delivered an AI pipeline that reads live network telemetry and logs, lets specialized agents diagnose problems, and routes every model call through a single proxy, so models can be swapped and compared without touching the agents.",
+    "Context": "Kinara Systems · Nov 2025 to Apr 2026 · Proprietary, shown as architecture only",
+    "DiagramLabel": "Architecture of the multi-agent analytics pipeline",
+    "Nodes": {
+      "Source": { "Title": "MQTT stream", "Sub": "Live network telemetry and logs" },
+      "Analyzers": { "Title": "Streaming analyzers", "Sub": "Telemetry Analyzer and Log Analyzer, Python services" },
+      "Agents": { "Title": "Agent layer", "Sub": "CrewAI + LangGraph orchestration" },
+      "Proxy": { "Title": "LLM proxy", "Sub": "Dynamic routing and A/B evaluation" },
+      "SelfHosted": { "Title": "Self-hosted models", "Sub": "Qwen · DeepSeek · ZGLM" },
+      "Cloud": { "Title": "Cloud providers", "Sub": "OpenAI · Anthropic" },
+      "Observability": { "Title": "Phoenix (Arize)", "Sub": "Traces agent sessions, tool calls and MCP client calls" },
+      "Config": { "Title": "Runtime config API", "Sub": "YAML-backed thresholds, patterns and LLM parameters, no restarts" }
+    },
+    "Agents": ["Telemetry analysis", "Log classification", "Ping-pong detection", "Sticky-client diagnosis"],
+    "DecisionsTitle": "Key decisions",
+    "Decisions": [
+      {
+        "Title": "One proxy in front of every model",
+        "Body": "Agents never call a provider directly. Routing between self-hosted and cloud models lives in one layer, so swapping a model or running an A/B comparison is a configuration change, not a code change."
+      },
+      {
+        "Title": "Choose models with evidence",
+        "Body": "I benchmarked GPT-4o, GPT-OSS-120B, DeepSeek V3, Qwen3 235B and ZGLM 4.6 on real network queries, comparing tool-call behavior, latency and output quality before picking one."
+      },
+      {
+        "Title": "Observability from day one",
+        "Body": "Phoenix traces every agent session and tool call, which turned latency bottlenecks, hallucination patterns and provider inconsistencies into data instead of anecdotes."
+      },
+      {
+        "Title": "Tested under load",
+        "Body": "A Docker harness with Mosquitto and InfluxDB generated synthetic telemetry for up to 100 access points to stress the agents and validate detection logic before release."
+      }
+    ],
+    "Stats": [
+      { "Value": "4", "Label": "specialized agents" },
+      { "Value": "5", "Label": "LLMs benchmarked" },
+      { "Value": "100", "Label": "access points in load tests" }
+    ]
   },
   "Experience": {
-    "Title": "Professional Experience",
-    "Description": "4+ years building production systems across AI, backend, and cloud — from multi-agent LLM pipelines to enterprise ERPs.",
+    "Eyebrow": "Experience",
+    "Title": "Professional experience",
+    "Description": "4+ years building production systems across AI, backend and cloud, from multi-agent LLM pipelines to a university accreditation platform.",
     "Items": {
+      "Upc": {
+        "Role": "Lead Software Engineer",
+        "Location": "Lima, Peru (Remote)",
+        "Period": "Mar 2025 — Aug 2026",
+        "Highlights": [
+          "Principal engineer of ABET 3.0, the university's accreditation platform now in production, on a team of 7. Led the rebuild from legacy .NET / SQL Server to NestJS, TypeORM and PostgreSQL (77 entities, 300 test suites) with a Next.js 16 / React 19 frontend.",
+          "Cut the grades export from 26 minutes to 85 seconds by profiling the production query with EXPLAIN ANALYZE, and made PDF generation 4x faster by moving the renderer to a persistent Chromium.",
+          "Created abet-plugins, the team's AI-assisted development standard. One shared source of skills, agents and policy rules generates plugins for Claude Code, Codex and opencode, backed by 425 test cases and adopted by all 7 developers.",
+          "Designed the CI/CD from scratch with GitHub Actions (a CI gate deploys cannot bypass, cached images on GHCR, Docker Compose deploys, image rollback) and merged backend and frontend into a pnpm monorepo.",
+          "Built a Playwright and Puppeteer scraping subsystem with a headful Chromium streamed over noVNC, so staff complete MFA logins live while the scraper reuses the session."
+        ]
+      },
       "Kinara": {
-        "Role": "Software Developer",
+        "Role": "AI Software Engineer",
         "Location": "Canada (Remote)",
         "Period": "Nov 2025 — Apr 2026",
         "Highlights": [
-          "Owned end-to-end design and delivery of a multi-agent AI pipeline for real-time Wi-Fi network analytics, orchestrating specialized agents with CrewAI and LangGraph.",
-          "Architected an LLM proxy layer with dynamic routing between self-hosted models (Qwen, DeepSeek) and cloud providers (OpenAI, Anthropic), enabling seamless model swapping and A/B evaluation.",
-          "Integrated Phoenix (Arize) for end-to-end LLM observability — tracing agent sessions and tool calls to identify latency bottlenecks and hallucination patterns.",
-          "Designed Python streaming-telemetry and log-analyzer services consuming MQTT network data, with runtime-configurable APIs and scale testing up to 100 APs using InfluxDB and Mosquitto."
+          "Designed and delivered a multi-agent AI pipeline for real-time Wi-Fi network analytics, orchestrating specialized agents with CrewAI and LangGraph.",
+          "Architected an LLM proxy layer with dynamic routing between self-hosted models (Qwen, DeepSeek, ZGLM) and cloud providers (OpenAI, Anthropic), enabling model swapping and A/B evaluation.",
+          "Integrated Phoenix (Arize) for end-to-end LLM observability, tracing agent sessions and tool calls to find latency bottlenecks and hallucination patterns.",
+          "Built Python streaming telemetry and log analyzer services on MQTT data, with runtime-configurable APIs and load tests of up to 100 APs using InfluxDB and Mosquitto."
         ]
       },
       "Enviame": {
@@ -33,9 +96,9 @@
         "Location": "Chile (Remote)",
         "Period": "Apr 2025 — Nov 2025",
         "Highlights": [
-          "Led end-to-end implementation of backend features on Google Cloud (Cloud Run, Cloud Functions, Firestore), owning architecture decisions and delivery.",
-          "Improved system reliability with a Redis-based batching system that regulated outbound requests, reducing rate-limit errors (HTTP 429) and stabilizing external API communication.",
-          "Automated the internal developer workflow by integrating MCP with JIRA, Confluence, and Bitbucket — including automatic PR generation — boosting team productivity.",
+          "Implemented backend features end to end on Google Cloud (Cloud Run, Cloud Functions, Firestore), from design to delivery.",
+          "Improved reliability with a Redis-based batching system that regulated outbound requests, reducing rate-limit errors (HTTP 429) and stabilizing external API communication.",
+          "Automated the internal developer workflow by integrating MCP with JIRA, Confluence and Bitbucket, including automatic PR generation.",
           "Optimized MySQL data access patterns, resolving critical performance issues and significantly reducing response times."
         ]
       },
@@ -56,7 +119,7 @@
         "Period": "Sep 2023 — Feb 2024",
         "Highlights": [
           "Developed a currency and cryptocurrency exchange platform in Odoo using MVC and OOP with real-time REST API integrations.",
-          "Implemented dynamic JavaScript visualizations for trend analysis and a PostgreSQL-backed regulatory reporting module."
+          "Implemented dynamic JavaScript visualizations for trend analysis and a PostgreSQL-backed reporting module for the SBS, Peru's banking regulator."
         ]
       },
       "Valentor": {
@@ -64,54 +127,37 @@
         "Location": "Lima, Peru (Remote)",
         "Period": "Apr 2022 — Sep 2023",
         "Highlights": [
-          "Architected and delivered 5+ integrated systems for nightclub operations: personnel management, cross-platform mobile app, POS, attendance control with facial recognition, and an event marketing platform.",
-          "Implemented cloud infrastructure on AWS and GCP with CI/CD, Docker, and Kubernetes — improving deployment speed by 60% and significantly reducing downtime."
+          "Built the personnel management system (shift scheduling, payroll, role-based access) as part of a team, with a Django backend serving a Flutter app for staff and an Angular panel for administrators.",
+          "Developed the attendance control system end to end with Vue.js and .NET, integrating Azure AD and a third-party facial recognition library to automate clock-in and clock-out.",
+          "Implemented cloud infrastructure on AWS with CI/CD, Docker and Kubernetes, improving deployment speed by 60%."
         ]
       }
     }
   },
   "Projects": {
-    "Title": "Featured Work",
-    "Description": "A selection of professional and personal projects. Proprietary work is described without visuals to respect client confidentiality.",
+    "Eyebrow": "Projects",
+    "Title": "Side projects",
+    "Description": "Personal projects with live demos and public code.",
     "Demo": "View demo",
     "Repo": "Repository",
     "Private": "Proprietary",
     "Authentication": "Requires authentication",
     "Personal": "Personal project",
     "Items": {
-      "AiPipeline": {
-        "Context": "Kinara Systems",
-        "Desc": "Multi-agent AI pipeline for real-time Wi-Fi network analytics: specialized CrewAI/LangGraph agents for telemetry analysis and log classification, an LLM proxy across self-hosted and cloud models, and full observability with Phoenix/Arize."
-      },
-      "McpAutomation": {
-        "Context": "Enviame",
-        "Desc": "MCP-based automation of the internal developer workflow, integrating JIRA, Confluence, and Bitbucket with workflow orchestration and automatic PR generation — cutting manual work across the team."
-      },
-      "Flit": {
-        "Context": "CIVA",
-        "Desc": "ERP for the transportation sector that optimizes fleet management, trip planning, and ticketing. Java/Spring Boot backend with JWT authentication and a React/Redux frontend."
-      },
-      "CryptoExchange": {
-        "Context": "SOLYMAN Consultores de TI",
-        "Desc": "Currency and cryptocurrency exchange platform built in Odoo with real-time REST API integrations, dynamic trend visualizations, and a PostgreSQL-backed regulatory reporting module."
-      },
-      "Nightclub": {
-        "Context": "VALENTOR Producciones S.A.C.",
-        "Desc": "Suite of 5+ integrated systems for nightclub operations: personnel management, cross-platform mobile app, POS, facial-recognition attendance control, and an event marketing platform — deployed on AWS and GCP."
-      },
       "NeuroPeru": {
         "Context": "Personal project",
-        "Desc": "Medical platform for neurosurgery, neurology, and traumatology consultations. It also offers medical equipment rentals and an information hub managed by specialists."
+        "Desc": "Medical platform for neurosurgery, neurology and traumatology consultations. It also offers medical equipment rentals and an information hub managed by specialists."
       },
       "BranchOut": {
         "Context": "Personal project",
-        "Desc": "Streamlines workforce tracking by scanning employee QR codes, instantly logging attendance with timestamps and key details. Filter and analyze records effortlessly."
+        "Desc": "Workforce attendance tracking by scanning employee QR codes, logging each check-in with a timestamp and key details, with filters to review the records."
       }
     }
   },
   "Skills": {
-    "Title": "Skills & Technologies",
-    "Description": "The stack I work with daily — from AI agent frameworks and LLM tooling to backend, frontend, cloud, and data infrastructure.",
+    "Eyebrow": "Skills",
+    "Title": "Skills and technologies",
+    "Description": "The stack I work with, from AI agent frameworks and LLM tooling to backend, frontend, cloud and databases.",
     "Categories": {
       "ai": "AI & Agents",
       "backend": "Backend",
@@ -121,14 +167,21 @@
     }
   },
   "Contact": {
+    "Eyebrow": "Contact",
     "Title": "Let's work together",
-    "Description": "Looking for an engineer who can design, build, and ship production-ready AI and backend systems? Let's talk — I'm always open to new challenges.",
+    "Description": "Looking for an engineer who can design, build and ship production AI and backend systems? Write to me and I'll get back to you.",
     "Form": {
       "Name": "Name",
       "Email": "Email",
       "Message": "Message",
       "Send": "Send",
       "Sending": "Sending..."
+    },
+    "Alert": {
+      "SuccessTitle": "Message sent",
+      "SuccessText": "Thanks for reaching out. I'll reply soon.",
+      "ErrorTitle": "Something went wrong",
+      "ErrorText": "The message could not be sent. Please email me directly."
     },
     "Info": {
       "Email": "Email",

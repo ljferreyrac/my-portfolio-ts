@@ -49,6 +49,7 @@ export const Navbar = () => {
   } as const;
 
   const navItems = [
+    { href: "#case-study", label: t("Navbar.CaseStudy") },
     { href: "#experience", label: t("Navbar.Experience") },
     { href: "#projects", label: t("Navbar.Projects") },
     { href: "#skills", label: t("Navbar.Skills") },
@@ -61,7 +62,6 @@ export const Navbar = () => {
           <motion.a
             href="#about"
             className="text-xl font-bold font-display text-white hover:text-emerald-400 transition-colors duration-200 cursor-pointer"
-            whileHover={{ scale: 1.05 }}
             onClick={(e) => {
               e.preventDefault();
               handleScrollTo("#about");
@@ -70,7 +70,7 @@ export const Navbar = () => {
             Leonardo Ferreyra
           </motion.a>
 
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-7">
             {navItems.map((item) => (
               <motion.a
                 key={item.href}
@@ -90,7 +90,6 @@ export const Navbar = () => {
               {languages.map((lng) => (
                 <motion.button
                   key={lng}
-                  whileHover={{ scale: 1.05 }}
                   aria-pressed={actualLng === lng}
                   className={`px-3 py-1 rounded-md transition-colors duration-200 cursor-pointer ${
                     actualLng === lng
@@ -106,8 +105,7 @@ export const Navbar = () => {
 
             <motion.a
               href="#contact"
-              className="bg-emerald-500 text-white px-6 py-2 rounded-md flex items-center space-x-2 hover:bg-emerald-600 transition-colors duration-200 cursor-pointer"
-              whileHover={{ scale: 1.05 }}
+              className="bg-emerald-500 text-slate-950 font-semibold px-5 py-2 rounded-md flex items-center space-x-2 hover:bg-emerald-400 transition-colors duration-200 cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
                 handleScrollTo("#contact");

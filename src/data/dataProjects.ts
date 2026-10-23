@@ -10,43 +10,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "AiPipeline",
-    title: "Multi-Agent AI Network Analytics Pipeline",
-    stack: [
-      "Python",
-      "CrewAI",
-      "LangGraph",
-      "Phoenix/Arize",
-      "MQTT",
-      "InfluxDB",
-    ],
-    isPrivate: true,
-  },
-  {
-    id: "McpAutomation",
-    title: "MCP Developer Workflow Automation",
-    stack: ["Python", "MCP", "JIRA", "Confluence", "Bitbucket"],
-    isPrivate: true,
-  },
-  {
-    id: "Flit",
-    title: "FLIT Transportation ERP",
-    stack: ["Java", "Spring Boot", "JWT", "React", "Redux"],
-    isPrivate: true,
-  },
-  {
-    id: "CryptoExchange",
-    title: "Currency & Crypto Exchange Platform",
-    stack: ["Odoo", "Python", "JavaScript", "PostgreSQL"],
-    isPrivate: true,
-  },
-  {
-    id: "Nightclub",
-    title: "Nightclub Operations Suite",
-    stack: ["Django", "React", "Flutter", "NestJS", "Next.js", "Vue", "AWS"],
-    isPrivate: true,
-  },
-  {
     id: "NeuroPeru",
     title: "Neuro Peru",
     stack: ["React", "TypeScript", "Tailwind CSS", "Cloudflare"],

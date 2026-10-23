@@ -3,6 +3,7 @@ import { motion, MotionConfig } from "framer-motion";
 import { store } from "./store/store";
 import { Navbar } from "./components/Navbar";
 import { About } from "./components/About";
+import { CaseStudy } from "./components/CaseStudy";
 import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
@@ -22,6 +23,7 @@ export const Portfolio = () => {
             <Navbar />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <About />
+              <CaseStudy />
               <Experience />
               <Projects />
               <Skills />

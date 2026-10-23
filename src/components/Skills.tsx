@@ -1,4 +1,4 @@
-import { HiCpuChip } from "react-icons/hi2";
+import { SectionHeader } from "./SectionHeader";
 import { skillCategories } from "../data/dataSkills";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
@@ -23,24 +23,14 @@ export const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 scroll-mt-16">
       <div className="container px-4 mx-auto max-w-6xl">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div className="inline-block mb-4">
-            <HiCpuChip className="w-14 h-14 text-emerald-400" />
-          </div>
-          <h2 className="text-4xl font-bold text-white mb-6">
-            {t("Skills.Title")}
-          </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            {t("Skills.Description")}
-          </p>
-        </motion.div>
+        <SectionHeader
+          index="04"
+          eyebrow={t("Skills.Eyebrow")}
+          title={t("Skills.Title")}
+          description={t("Skills.Description")}
+        />
 
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
