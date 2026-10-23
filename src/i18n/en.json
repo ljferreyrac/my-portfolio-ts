@@ -28,25 +28,25 @@
         "Label": "developers adopted my AI-assisted dev standard"
       },
       {
-        "Value": "100 APs",
-        "Label": "of synthetic load to stress-test AI agents"
+        "Value": "425",
+        "Label": "test cases guarding the team's AI coding rules"
       }
     ]
   },
   "CaseStudy": {
     "Eyebrow": "Case study",
-    "Title": "Multi-agent pipeline for real-time Wi-Fi analytics",
-    "Lead": "At Kinara Systems I designed and delivered an AI pipeline that reads live network telemetry and logs, lets specialized agents diagnose problems, and routes every model call through a single proxy, so models can be swapped and compared without touching the agents.",
-    "Context": "Kinara Systems · Nov 2025 to Apr 2026 · Proprietary, shown as architecture only",
+    "Title": "Multi-agent pipeline for real-time network analytics",
+    "Lead": "In a previous role I designed and delivered an AI pipeline that reads live network telemetry and logs, lets specialized agents diagnose problems, and routes every model call through a single proxy, so models can be swapped and compared without touching the agents.",
+    "Context": "Previous role · Proprietary system, described as a generic pattern",
     "DiagramLabel": "Architecture of the multi-agent analytics pipeline",
     "Nodes": {
       "Source": {
-        "Title": "MQTT stream",
-        "Sub": "Live network telemetry and logs"
+        "Title": "Telemetry stream",
+        "Sub": "Live device telemetry and logs over MQTT"
       },
       "Analyzers": {
         "Title": "Streaming analyzers",
-        "Sub": "Telemetry Analyzer and Log Analyzer, Python services"
+        "Sub": "Python services that process telemetry and logs in real time"
       },
       "Agents": {
         "Title": "Agent layer",
@@ -58,26 +58,26 @@
       },
       "SelfHosted": {
         "Title": "Self-hosted models",
-        "Sub": "Qwen · DeepSeek · ZGLM"
+        "Sub": "Open-weight LLMs"
       },
       "Cloud": {
         "Title": "Cloud providers",
-        "Sub": "OpenAI · Anthropic"
+        "Sub": "Commercial LLM APIs"
       },
       "Observability": {
-        "Title": "Phoenix (Arize)",
-        "Sub": "Traces agent sessions, tool calls and MCP client calls"
+        "Title": "LLM tracing",
+        "Sub": "Agent sessions and tool calls traced end to end"
       },
       "Config": {
         "Title": "Runtime config API",
-        "Sub": "YAML-backed thresholds, patterns and LLM parameters, no restarts"
+        "Sub": "Thresholds and model parameters updated without restarts"
       }
     },
     "Agents": [
       "Telemetry analysis",
       "Log classification",
-      "Ping-pong detection",
-      "Sticky-client diagnosis"
+      "Anomaly detection",
+      "Diagnosis"
     ],
     "DecisionsTitle": "Key decisions",
     "Decisions": [
@@ -87,31 +87,18 @@
       },
       {
         "Title": "Choose models with evidence",
-        "Body": "I benchmarked GPT-4o, GPT-OSS-120B, DeepSeek V3, Qwen3 235B and ZGLM 4.6 on real network queries, comparing tool-call behavior, latency and output quality before picking one."
+        "Body": "Candidate models were benchmarked on real domain queries, comparing tool-call behavior, latency and output quality before choosing one."
       },
       {
         "Title": "Observability from day one",
-        "Body": "Phoenix traces every agent session and tool call, which turned latency bottlenecks, hallucination patterns and provider inconsistencies into data instead of anecdotes."
+        "Body": "Every agent session and tool call is traced, which turned latency bottlenecks, hallucination patterns and provider inconsistencies into data instead of anecdotes."
       },
       {
         "Title": "Tested under load",
-        "Body": "A Docker harness with Mosquitto and InfluxDB generated synthetic telemetry for up to 100 access points to stress the agents and validate detection logic before release."
+        "Body": "A containerized harness generated synthetic telemetry at scale to stress the agents and validate detection logic before release."
       }
     ],
-    "Stats": [
-      {
-        "Value": "4",
-        "Label": "specialized agents"
-      },
-      {
-        "Value": "5",
-        "Label": "LLMs benchmarked"
-      },
-      {
-        "Value": "100",
-        "Label": "access points in load tests"
-      }
-    ]
+    "Stats": []
   },
   "Experience": {
     "Eyebrow": "Experience",
@@ -135,10 +122,10 @@
         "Location": "Canada (Remote)",
         "Period": "Nov 2025 — Apr 2026",
         "Highlights": [
-          "Designed and delivered a multi-agent AI pipeline for real-time Wi-Fi network analytics, orchestrating specialized agents with CrewAI and LangGraph.",
-          "Architected an LLM proxy layer with dynamic routing between self-hosted models (Qwen, DeepSeek, ZGLM) and cloud providers (OpenAI, Anthropic), enabling model swapping and A/B evaluation.",
-          "Integrated Phoenix (Arize) for end-to-end LLM observability, tracing agent sessions and tool calls to find latency bottlenecks and hallucination patterns.",
-          "Built Python streaming telemetry and log analyzer services on MQTT data, with runtime-configurable APIs and load tests of up to 100 APs using InfluxDB and Mosquitto."
+          "Designed and delivered a multi-agent AI pipeline for real-time network analytics, orchestrating specialized agents with CrewAI and LangGraph.",
+          "Built an LLM proxy layer routing between self-hosted and cloud models, enabling model swapping and A/B evaluation.",
+          "Added end-to-end LLM observability with Phoenix (Arize), tracing agent sessions and tool calls to find latency bottlenecks and hallucination patterns.",
+          "Built Python streaming services that process network telemetry and logs, with runtime-configurable APIs and load testing on synthetic data."
         ]
       },
       "Enviame": {

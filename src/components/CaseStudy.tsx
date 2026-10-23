@@ -49,7 +49,8 @@ const lineXVariant: Variants = {
   }),
 };
 
-const nodeBase = "rounded-xl border bg-slate-900/80 p-4 sm:p-5 text-left min-w-0";
+const nodeBase =
+  "rounded-xl border bg-slate-900/80 p-4 sm:p-5 text-left min-w-0";
 const mainNode = `${nodeBase} border-slate-700`;
 const sideNode = `${nodeBase} border-dashed border-emerald-500/40`;
 
@@ -166,7 +167,11 @@ export const CaseStudy = () => {
                 custom={7}
                 aria-hidden="true"
               />
-              <Node {...n("Config")} index={7} className={`${sideNode} flex-1`} />
+              <Node
+                {...n("Config")}
+                index={7}
+                className={`${sideNode} flex-1`}
+              />
             </div>
 
             <div className="lg:col-start-2 lg:row-start-4">
@@ -229,25 +234,27 @@ export const CaseStudy = () => {
         </figure>
 
         {/* Stats */}
-        <dl className="mt-10 grid grid-cols-3 gap-3 sm:gap-6">
-          {stats.map((s, i) => (
-            <motion.div
-              key={s.Label}
-              className="flex flex-col-reverse rounded-xl border border-slate-800 bg-slate-900/60 px-2 py-4 text-center sm:p-6"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.4, ease: "easeOut", delay: i * 0.1 }}
-            >
-              <dt className="mt-2 text-[11px] leading-tight text-slate-400 sm:text-sm sm:leading-normal">
-                {s.Label}
-              </dt>
-              <dd className="font-display text-3xl font-bold text-emerald-400 sm:text-5xl">
-                {s.Value}
-              </dd>
-            </motion.div>
-          ))}
-        </dl>
+        {stats.length > 0 && (
+          <dl className="mt-10 grid grid-cols-3 gap-3 sm:gap-6">
+            {stats.map((s, i) => (
+              <motion.div
+                key={s.Label}
+                className="flex flex-col-reverse rounded-xl border border-slate-800 bg-slate-900/60 px-2 py-4 text-center sm:p-6"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.4, ease: "easeOut", delay: i * 0.1 }}
+              >
+                <dt className="mt-2 text-[11px] leading-tight text-slate-400 sm:text-sm sm:leading-normal">
+                  {s.Label}
+                </dt>
+                <dd className="font-display text-3xl font-bold text-emerald-400 sm:text-5xl">
+                  {s.Value}
+                </dd>
+              </motion.div>
+            ))}
+          </dl>
+        )}
 
         {/* Decisions */}
         <h3 className="mb-6 mt-16 text-2xl font-bold text-white">

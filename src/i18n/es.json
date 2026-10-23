@@ -28,25 +28,25 @@
         "Label": "desarrolladores adoptaron mi estándar de desarrollo asistido por IA"
       },
       {
-        "Value": "100 APs",
-        "Label": "de carga sintética para probar los agentes de IA"
+        "Value": "425",
+        "Label": "casos de prueba sobre las reglas de desarrollo con IA del equipo"
       }
     ]
   },
   "CaseStudy": {
     "Eyebrow": "Caso de estudio",
-    "Title": "Pipeline multiagente para analítica Wi-Fi en tiempo real",
-    "Lead": "En Kinara Systems diseñé y entregué un pipeline de IA que lee telemetría y logs de red en vivo, deja que agentes especializados diagnostiquen problemas y enruta cada llamada a un modelo por un único proxy, para cambiar y comparar modelos sin tocar los agentes.",
-    "Context": "Kinara Systems · Nov 2025 a Abr 2026 · Propietario, se muestra solo la arquitectura",
+    "Title": "Pipeline multiagente para analítica de red en tiempo real",
+    "Lead": "En un rol anterior diseñé y entregué un pipeline de IA que lee telemetría y logs de red en vivo, deja que agentes especializados diagnostiquen problemas y enruta cada llamada a un modelo por un único proxy, para cambiar y comparar modelos sin tocar los agentes.",
+    "Context": "Rol anterior · Sistema propietario, descrito como patrón genérico",
     "DiagramLabel": "Arquitectura del pipeline multiagente de analítica",
     "Nodes": {
       "Source": {
-        "Title": "Stream MQTT",
-        "Sub": "Telemetría y logs de red en vivo"
+        "Title": "Stream de telemetría",
+        "Sub": "Telemetría y logs de dispositivos en vivo vía MQTT"
       },
       "Analyzers": {
         "Title": "Analizadores en streaming",
-        "Sub": "Telemetry Analyzer y Log Analyzer, servicios en Python"
+        "Sub": "Servicios en Python que procesan telemetría y logs en tiempo real"
       },
       "Agents": {
         "Title": "Capa de agentes",
@@ -58,26 +58,26 @@
       },
       "SelfHosted": {
         "Title": "Modelos autoalojados",
-        "Sub": "Qwen · DeepSeek · ZGLM"
+        "Sub": "LLMs de pesos abiertos"
       },
       "Cloud": {
         "Title": "Proveedores cloud",
-        "Sub": "OpenAI · Anthropic"
+        "Sub": "APIs comerciales de LLM"
       },
       "Observability": {
-        "Title": "Phoenix (Arize)",
-        "Sub": "Traza sesiones de agentes, llamadas a herramientas y llamadas del cliente MCP"
+        "Title": "Trazabilidad de LLM",
+        "Sub": "Sesiones de agentes y llamadas a herramientas trazadas de punta a punta"
       },
       "Config": {
         "Title": "API de configuración",
-        "Sub": "Umbrales, patrones y parámetros de LLM en YAML, sin reinicios"
+        "Sub": "Umbrales y parámetros de modelos actualizados sin reinicios"
       }
     },
     "Agents": [
       "Análisis de telemetría",
       "Clasificación de logs",
-      "Detección de ping-pong",
-      "Diagnóstico de sticky clients"
+      "Detección de anomalías",
+      "Diagnóstico"
     ],
     "DecisionsTitle": "Decisiones clave",
     "Decisions": [
@@ -87,31 +87,18 @@
       },
       {
         "Title": "Elegir modelos con evidencia",
-        "Body": "Comparé GPT-4o, GPT-OSS-120B, DeepSeek V3, Qwen3 235B y ZGLM 4.6 con consultas reales de red, midiendo el comportamiento en llamadas a herramientas, la latencia y la calidad de salida antes de elegir."
+        "Body": "Los modelos candidatos se compararon con consultas reales del dominio, midiendo el comportamiento en llamadas a herramientas, la latencia y la calidad de salida antes de elegir."
       },
       {
         "Title": "Observabilidad desde el primer día",
-        "Body": "Phoenix traza cada sesión de agente y cada llamada a herramientas, lo que convirtió los cuellos de botella de latencia, las alucinaciones y las diferencias entre proveedores en datos y no en anécdotas."
+        "Body": "Cada sesión de agente y cada llamada a herramientas queda trazada, lo que convirtió los cuellos de botella de latencia, las alucinaciones y las diferencias entre proveedores en datos y no en anécdotas."
       },
       {
         "Title": "Probado bajo carga",
-        "Body": "Un entorno en Docker con Mosquitto e InfluxDB generó telemetría sintética de hasta 100 access points para estresar a los agentes y validar la lógica de detección antes de liberar."
+        "Body": "Un entorno en contenedores generó telemetría sintética a escala para estresar a los agentes y validar la lógica de detección antes de liberar."
       }
     ],
-    "Stats": [
-      {
-        "Value": "4",
-        "Label": "agentes especializados"
-      },
-      {
-        "Value": "5",
-        "Label": "LLMs comparados"
-      },
-      {
-        "Value": "100",
-        "Label": "access points en pruebas de carga"
-      }
-    ]
+    "Stats": []
   },
   "Experience": {
     "Eyebrow": "Experiencia",
@@ -135,10 +122,10 @@
         "Location": "Canadá (Remoto)",
         "Period": "Nov 2025 — Abr 2026",
         "Highlights": [
-          "Diseñé y entregué un pipeline multiagente de IA para analítica de redes Wi-Fi en tiempo real, orquestando agentes especializados con CrewAI y LangGraph.",
-          "Diseñé una capa proxy de LLMs con enrutamiento dinámico entre modelos autoalojados (Qwen, DeepSeek, ZGLM) y proveedores cloud (OpenAI, Anthropic), permitiendo intercambio de modelos y evaluación A/B.",
-          "Integré Phoenix (Arize) para observabilidad completa de LLMs, trazando sesiones de agentes y llamadas a herramientas para encontrar cuellos de botella de latencia y patrones de alucinación.",
-          "Construí servicios en Python de análisis de telemetría y logs en streaming sobre datos MQTT, con APIs configurables en tiempo de ejecución y pruebas de carga de hasta 100 APs usando InfluxDB y Mosquitto."
+          "Diseñé y entregué un pipeline multiagente de IA para analítica de red en tiempo real, orquestando agentes especializados con CrewAI y LangGraph.",
+          "Construí una capa proxy de LLMs con enrutamiento entre modelos autoalojados y en la nube, permitiendo intercambio de modelos y evaluación A/B.",
+          "Añadí observabilidad completa de LLMs con Phoenix (Arize), trazando sesiones de agentes y llamadas a herramientas para encontrar cuellos de botella de latencia y patrones de alucinación.",
+          "Construí servicios en Python que procesan telemetría y logs de red en streaming, con APIs configurables en tiempo de ejecución y pruebas de carga con datos sintéticos."
         ]
       },
       "Enviame": {
