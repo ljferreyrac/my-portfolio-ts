@@ -2,12 +2,10 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { HiArrowRight, HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLngStore } from "../hooks/useLngStore";
+import { LanguageMenu } from "./LanguageMenu";
 
 export const Navbar = () => {
   const { t } = useTranslation();
-  const { actualLng, switchLanguage } = useLngStore();
-  const languages = ["en", "es"];
   const [isOpen, setIsOpen] = useState(false);
 
   const handleScrollTo = (elementId: string) => {
@@ -70,7 +68,7 @@ export const Navbar = () => {
             Leonardo Ferreyra
           </motion.a>
 
-          <nav className="hidden md:flex items-center space-x-7">
+          <nav className="hidden md:flex items-center gap-7">
             {navItems.map((item) => (
               <motion.a
                 key={item.href}
@@ -86,22 +84,7 @@ export const Navbar = () => {
               </motion.a>
             ))}
 
-            <div className="flex space-x-2">
-              {languages.map((lng) => (
-                <motion.button
-                  key={lng}
-                  aria-pressed={actualLng === lng}
-                  className={`px-3 py-1 rounded-md transition-colors duration-200 cursor-pointer ${
-                    actualLng === lng
-                      ? "bg-emerald-500 text-white"
-                      : "bg-slate-800 text-slate-300 hover:bg-slate-700"
-                  }`}
-                  onClick={() => switchLanguage(lng)}
-                >
-                  {lng.toUpperCase()}
-                </motion.button>
-              ))}
-            </div>
+            <LanguageMenu />
 
             <motion.a
               href="#contact"
@@ -116,14 +99,17 @@ export const Navbar = () => {
             </motion.a>
           </nav>
 
-          <button
-            className="md:hidden text-slate-300 hover:text-white cursor-pointer p-2"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isOpen}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
-          </button>
+          <div className="flex items-center gap-1 md:hidden">
+            <LanguageMenu />
+            <button
+              className="text-slate-300 hover:text-white cursor-pointer p-2"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+            </button>
+          </div>
         </div>
 
         <AnimatePresence mode="wait">
@@ -149,23 +135,6 @@ export const Navbar = () => {
                     {item.label}
                   </a>
                 ))}
-
-                <div className="flex space-x-2 px-3 py-2">
-                  {languages.map((lng) => (
-                    <button
-                      key={lng}
-                      aria-pressed={actualLng === lng}
-                      className={`px-3 py-1 rounded-md cursor-pointer transition-colors duration-200 ${
-                        actualLng === lng
-                          ? "bg-emerald-500 text-white"
-                          : "bg-slate-800 text-slate-300"
-                      }`}
-                      onClick={() => switchLanguage(lng)}
-                    >
-                      {lng.toUpperCase()}
-                    </button>
-                  ))}
-                </div>
 
                 <a
                   href="#contact"

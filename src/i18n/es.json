@@ -15,10 +15,22 @@
     "ViewProjects": "Ver el caso de estudio",
     "Resume": "Descargar CV",
     "Metrics": [
-      { "Value": "18x", "Label": "más rápida la exportación de notas tras perfilar la consulta en producción" },
-      { "Value": "4x", "Label": "más rápida la generación de PDF con un renderizador persistente" },
-      { "Value": "7/7", "Label": "desarrolladores adoptaron mi estándar de desarrollo asistido por IA" },
-      { "Value": "100 APs", "Label": "de carga sintética para probar los agentes de IA" }
+      {
+        "Value": "18x",
+        "Label": "más rápida la exportación de notas tras perfilar la consulta en producción"
+      },
+      {
+        "Value": "4x",
+        "Label": "más rápida la generación de PDF con un renderizador persistente"
+      },
+      {
+        "Value": "7/7",
+        "Label": "desarrolladores adoptaron mi estándar de desarrollo asistido por IA"
+      },
+      {
+        "Value": "100 APs",
+        "Label": "de carga sintética para probar los agentes de IA"
+      }
     ]
   },
   "CaseStudy": {
@@ -28,16 +40,45 @@
     "Context": "Kinara Systems · Nov 2025 a Abr 2026 · Propietario, se muestra solo la arquitectura",
     "DiagramLabel": "Arquitectura del pipeline multiagente de analítica",
     "Nodes": {
-      "Source": { "Title": "Stream MQTT", "Sub": "Telemetría y logs de red en vivo" },
-      "Analyzers": { "Title": "Analizadores en streaming", "Sub": "Telemetry Analyzer y Log Analyzer, servicios en Python" },
-      "Agents": { "Title": "Capa de agentes", "Sub": "Orquestación con CrewAI + LangGraph" },
-      "Proxy": { "Title": "Proxy de LLM", "Sub": "Enrutamiento dinámico y evaluación A/B" },
-      "SelfHosted": { "Title": "Modelos autoalojados", "Sub": "Qwen · DeepSeek · ZGLM" },
-      "Cloud": { "Title": "Proveedores cloud", "Sub": "OpenAI · Anthropic" },
-      "Observability": { "Title": "Phoenix (Arize)", "Sub": "Traza sesiones de agentes, llamadas a herramientas y llamadas del cliente MCP" },
-      "Config": { "Title": "API de configuración", "Sub": "Umbrales, patrones y parámetros de LLM en YAML, sin reinicios" }
+      "Source": {
+        "Title": "Stream MQTT",
+        "Sub": "Telemetría y logs de red en vivo"
+      },
+      "Analyzers": {
+        "Title": "Analizadores en streaming",
+        "Sub": "Telemetry Analyzer y Log Analyzer, servicios en Python"
+      },
+      "Agents": {
+        "Title": "Capa de agentes",
+        "Sub": "Orquestación con CrewAI + LangGraph"
+      },
+      "Proxy": {
+        "Title": "Proxy de LLM",
+        "Sub": "Enrutamiento dinámico y evaluación A/B"
+      },
+      "SelfHosted": {
+        "Title": "Modelos autoalojados",
+        "Sub": "Qwen · DeepSeek · ZGLM"
+      },
+      "Cloud": {
+        "Title": "Proveedores cloud",
+        "Sub": "OpenAI · Anthropic"
+      },
+      "Observability": {
+        "Title": "Phoenix (Arize)",
+        "Sub": "Traza sesiones de agentes, llamadas a herramientas y llamadas del cliente MCP"
+      },
+      "Config": {
+        "Title": "API de configuración",
+        "Sub": "Umbrales, patrones y parámetros de LLM en YAML, sin reinicios"
+      }
     },
-    "Agents": ["Análisis de telemetría", "Clasificación de logs", "Detección de ping-pong", "Diagnóstico de sticky clients"],
+    "Agents": [
+      "Análisis de telemetría",
+      "Clasificación de logs",
+      "Detección de ping-pong",
+      "Diagnóstico de sticky clients"
+    ],
     "DecisionsTitle": "Decisiones clave",
     "Decisions": [
       {
@@ -58,9 +99,18 @@
       }
     ],
     "Stats": [
-      { "Value": "4", "Label": "agentes especializados" },
-      { "Value": "5", "Label": "LLMs comparados" },
-      { "Value": "100", "Label": "access points en pruebas de carga" }
+      {
+        "Value": "4",
+        "Label": "agentes especializados"
+      },
+      {
+        "Value": "5",
+        "Label": "LLMs comparados"
+      },
+      {
+        "Value": "100",
+        "Label": "access points en pruebas de carga"
+      }
     ]
   },
   "Experience": {
@@ -136,20 +186,20 @@
   },
   "Projects": {
     "Eyebrow": "Proyectos",
-    "Title": "Proyectos personales",
-    "Description": "Proyectos propios con demo en vivo y código público.",
+    "Title": "Proyectos freelance",
+    "Description": "Proyectos construidos y entregados para clientes, con demo en vivo y código.",
     "Demo": "Ver demo",
     "Repo": "Repositorio",
     "Private": "Propietario",
     "Authentication": "Requiere autenticación",
-    "Personal": "Proyecto personal",
+    "Personal": "Freelance · Proyecto para cliente",
     "Items": {
       "NeuroPeru": {
-        "Context": "Proyecto personal",
+        "Context": "Freelance · Proyecto para cliente",
         "Desc": "Plataforma médica para consultas en neurocirugía, neurología y traumatología. Además, ofrece alquiler de equipos médicos y un centro de información gestionado por especialistas."
       },
       "BranchOut": {
-        "Context": "Proyecto personal",
+        "Context": "Freelance · Proyecto para cliente",
         "Desc": "Control de asistencia del personal escaneando códigos QR, registrando cada marcación con hora y datos clave, con filtros para revisar los registros."
       }
     }

@@ -15,10 +15,22 @@
     "ViewProjects": "See the case study",
     "Resume": "Download resume",
     "Metrics": [
-      { "Value": "18x", "Label": "faster grade export after profiling the production query" },
-      { "Value": "4x", "Label": "faster PDF generation with a persistent renderer" },
-      { "Value": "7/7", "Label": "developers adopted my AI-assisted dev standard" },
-      { "Value": "100 APs", "Label": "of synthetic load to stress-test AI agents" }
+      {
+        "Value": "18x",
+        "Label": "faster grade export after profiling the production query"
+      },
+      {
+        "Value": "4x",
+        "Label": "faster PDF generation with a persistent renderer"
+      },
+      {
+        "Value": "7/7",
+        "Label": "developers adopted my AI-assisted dev standard"
+      },
+      {
+        "Value": "100 APs",
+        "Label": "of synthetic load to stress-test AI agents"
+      }
     ]
   },
   "CaseStudy": {
@@ -28,16 +40,45 @@
     "Context": "Kinara Systems · Nov 2025 to Apr 2026 · Proprietary, shown as architecture only",
     "DiagramLabel": "Architecture of the multi-agent analytics pipeline",
     "Nodes": {
-      "Source": { "Title": "MQTT stream", "Sub": "Live network telemetry and logs" },
-      "Analyzers": { "Title": "Streaming analyzers", "Sub": "Telemetry Analyzer and Log Analyzer, Python services" },
-      "Agents": { "Title": "Agent layer", "Sub": "CrewAI + LangGraph orchestration" },
-      "Proxy": { "Title": "LLM proxy", "Sub": "Dynamic routing and A/B evaluation" },
-      "SelfHosted": { "Title": "Self-hosted models", "Sub": "Qwen · DeepSeek · ZGLM" },
-      "Cloud": { "Title": "Cloud providers", "Sub": "OpenAI · Anthropic" },
-      "Observability": { "Title": "Phoenix (Arize)", "Sub": "Traces agent sessions, tool calls and MCP client calls" },
-      "Config": { "Title": "Runtime config API", "Sub": "YAML-backed thresholds, patterns and LLM parameters, no restarts" }
+      "Source": {
+        "Title": "MQTT stream",
+        "Sub": "Live network telemetry and logs"
+      },
+      "Analyzers": {
+        "Title": "Streaming analyzers",
+        "Sub": "Telemetry Analyzer and Log Analyzer, Python services"
+      },
+      "Agents": {
+        "Title": "Agent layer",
+        "Sub": "CrewAI + LangGraph orchestration"
+      },
+      "Proxy": {
+        "Title": "LLM proxy",
+        "Sub": "Dynamic routing and A/B evaluation"
+      },
+      "SelfHosted": {
+        "Title": "Self-hosted models",
+        "Sub": "Qwen · DeepSeek · ZGLM"
+      },
+      "Cloud": {
+        "Title": "Cloud providers",
+        "Sub": "OpenAI · Anthropic"
+      },
+      "Observability": {
+        "Title": "Phoenix (Arize)",
+        "Sub": "Traces agent sessions, tool calls and MCP client calls"
+      },
+      "Config": {
+        "Title": "Runtime config API",
+        "Sub": "YAML-backed thresholds, patterns and LLM parameters, no restarts"
+      }
     },
-    "Agents": ["Telemetry analysis", "Log classification", "Ping-pong detection", "Sticky-client diagnosis"],
+    "Agents": [
+      "Telemetry analysis",
+      "Log classification",
+      "Ping-pong detection",
+      "Sticky-client diagnosis"
+    ],
     "DecisionsTitle": "Key decisions",
     "Decisions": [
       {
@@ -58,9 +99,18 @@
       }
     ],
     "Stats": [
-      { "Value": "4", "Label": "specialized agents" },
-      { "Value": "5", "Label": "LLMs benchmarked" },
-      { "Value": "100", "Label": "access points in load tests" }
+      {
+        "Value": "4",
+        "Label": "specialized agents"
+      },
+      {
+        "Value": "5",
+        "Label": "LLMs benchmarked"
+      },
+      {
+        "Value": "100",
+        "Label": "access points in load tests"
+      }
     ]
   },
   "Experience": {
@@ -136,20 +186,20 @@
   },
   "Projects": {
     "Eyebrow": "Projects",
-    "Title": "Side projects",
-    "Description": "Personal projects with live demos and public code.",
+    "Title": "Freelance work",
+    "Description": "Projects built and delivered for paying clients, with live demos and code.",
     "Demo": "View demo",
     "Repo": "Repository",
     "Private": "Proprietary",
     "Authentication": "Requires authentication",
-    "Personal": "Personal project",
+    "Personal": "Freelance · Client project",
     "Items": {
       "NeuroPeru": {
-        "Context": "Personal project",
+        "Context": "Freelance · Client project",
         "Desc": "Medical platform for neurosurgery, neurology and traumatology consultations. It also offers medical equipment rentals and an information hub managed by specialists."
       },
       "BranchOut": {
-        "Context": "Personal project",
+        "Context": "Freelance · Client project",
         "Desc": "Workforce attendance tracking by scanning employee QR codes, logging each check-in with a timestamp and key details, with filters to review the records."
       }
     }
